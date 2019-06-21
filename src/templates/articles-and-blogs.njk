@@ -1,0 +1,26 @@
+{% extends './default.njk' %}
+
+{% block body %}
+  {%- component 'header' -%}
+
+  <main class="page-item">
+    <div class="page-item">
+      <section class="constrain--s">
+        <h2 class="section-title">Articles</h2>
+        {%- component 'articles-list' -%}
+      </section>
+    </div>
+
+    <div class="page-item">
+      <section class="constrain--s page-item">
+        <h2 class="section-title">Blogs</h2>
+        {%- component 'articles-list' -%}
+      </section>
+    </div>
+
+  </main>
+
+  <div class="content-item">
+    {%- component 'footer' -%}
+  </div>
+{% endblock %}

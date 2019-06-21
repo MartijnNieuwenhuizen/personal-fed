@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "title": "You should use the GitHub branches",
+      "date": "14-02-2019",
+      "readingTime": "5"
+    },
+    {
+      "title": "My approach to modular CSS",
+      "date": "14-02-2019",
+      "readingTime": "5"
+    },
+    {
+      "title": "Why you should progressive enhance everything you build!",
+      "date": "14-02-2019",
+      "readingTime": "5"
+    },
+    {
+      "title": "De Pomodoro-methode",
+      "date": "14-02-2019",
+      "readingTime": "5"
+    }
+  ]
+}

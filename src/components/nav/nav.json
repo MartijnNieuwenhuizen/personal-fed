@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "label": "Articles and Blogs",
+      "href": "/templates/articles-and-blogs.html",
+      "active": true
+    },
+    {
+      "label": "Playground",
+      "href": "/playground",
+      "active": false
+    }
+  ]
+}

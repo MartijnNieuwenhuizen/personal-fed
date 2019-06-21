@@ -1,0 +1,73 @@
+$font-family-serif: 'IdealSans';
+$font-family-sans-serif: Helvetica;
+
+$font-size-xxl: 46px;
+$font-size-xl: 32px;
+$font-size-l: 26px;
+$font-size-m: 20px;
+$font-size-s: 16px;
+$font-size-xs: 12px;
+$base-font-size: $font-size-m;
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-bolder: bolder;
+
+@mixin header-xxl {
+  font-size: $font-size-xxl;
+  font-family: $font-family-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin header-xl {
+  font-size: $font-size-xl;
+  font-family: $font-family-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin header-l {
+  font-size: $font-size-l;
+  font-family: $font-family-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin header-m {
+  font-size: $font-size-m;
+  font-family: $font-family-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: $font-family-sans-serif, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+.h1 {
+  @include header-xxl;
+}
+h2,
+.h2 {
+  @include header-xl;
+}
+h3,
+.h3 {
+  @include header-l;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  @include header-m;
+}
+
+.section-title {
+  padding: 0 $spacing-m;
+}

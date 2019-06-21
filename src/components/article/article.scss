@@ -1,0 +1,88 @@
+.article {
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  &__foo,
+  &__header,
+  &__aside,
+  &__tags {
+    display: flex;
+  }
+
+  &__foo-wrapper {
+    position: absolute;
+    top: -9rem;
+    bottom: -9rem;
+    left: -8.5rem;
+    width: 9rem;
+
+    background-color: $color-primary;
+
+    opacity: 0;
+    animation: fade-in $pace-slow $delay-default $ease-in-out forwards,
+      create-from-top $pace-slower $delay-default $ease-in-out forwards;
+
+    @include breakpoint($breakpoint-l) {
+      left: -13rem;
+    }
+  }
+
+  &__foo {
+    padding: 1rem 10rem;
+
+    transform: rotate(90deg);
+    transform-origin: left top;
+  }
+
+  &__main {
+    padding: 1rem;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    opacity: 0;
+    animation: fade-in $pace-normal $delay-long $ease-in-out forwards,
+      move-from-below $pace-normal $delay-long $ease-in-out both;
+
+    @include breakpoint($breakpoint-s) {
+      padding: 1rem 2rem;
+    }
+    @include breakpoint($breakpoint-m) {
+      padding: 1rem 4rem;
+      font-size: 1.5rem;
+    }
+    @include breakpoint($breakpoint-l) {
+      padding: 1rem 4rem 1rem 7rem;
+      margin: 0 -3rem 0 0;
+    }
+
+    p:first-of-type {
+      font-weight: $font-weight-bold;
+    }
+
+    p:first-of-type::first-letter {
+      float: left;
+      margin: -0.5rem 0 0;
+      padding: 0 1rem 0 0;
+
+      font-size: 400%;
+      line-height: 1;
+
+      color: $color-primary;
+    }
+
+    @include breakpoint($breakpoint-m) {
+      p:not(:first-of-type) {
+        @supports (hyphens: auto) {
+          text-align: justify;
+          hyphens: auto;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: $spacing-xxxxl;
+    }
+  }
+}

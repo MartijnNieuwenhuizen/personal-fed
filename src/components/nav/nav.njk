@@ -1,0 +1,14 @@
+<nav class="nav">
+  <ol class="nav__list">
+    {% for item in items %}
+      {%- set classes = {
+        'nav__link': true,
+        'nav__link--active': item.active === true
+      } | classes -%}
+
+      <li class="nav__item">
+        <a class="{{ classes }}" href="{{ item.href }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

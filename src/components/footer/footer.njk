@@ -1,0 +1,10 @@
+<footer class="footer">
+  {% for link in links %}
+    {% set iconName = 'icons/' + link.icon %}
+
+    <a class="footer__link" href="{{ link.href }}">
+      <span class="screen-reader">{{ link.screenReader }}</span>
+      {%- component iconName -%}
+    </a>
+  {% endfor %}
+</footer>

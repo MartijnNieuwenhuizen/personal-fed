@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.screen-reader {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+article {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  code,
+  img {
+    max-width: 50rem;
+  }
+}
+
+pre code {
+  display: block;
+  padding: $spacing-xl;
+  overflow-x: auto;
+  border: 5px solid $color-black;
+}

@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  &__link {
+    color: $color-black;
+
+    transition: $pace-fast $ease-in-out color;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<article class="article">
+  <div class="article__foo-wrapper">
+    {# <div class="article__foo">
+      <header class="article__header">
+        <h1 class="article__title">{{ title }}</h1>
+      </header>
+
+      <aside class="article__aside">
+        <time class="article__date">{{ date }}</time>
+        <ol class="article__tags">
+          <li>
+            <a href="">#Foo</a>
+          </li>
+          <li>
+            <a href="">#Bar</a>
+          </li>
+        </ol>
+      </aside>
+    </div> #}
+  </div>
+
+  <div class="article__main">
+    {{ article | safe }}
+    {{ article | safe }}
+    {{ article | safe }}
+    {{ article | safe }}
+    {{ article | safe }}
+  </div>
+
+  <footer></footer>
+</article>
+{#
+
+  <div class="article__body"></div>
+
+{{ article | safe }}
+    <pre>
+      <code>
+const foo = 'bar';
+const bar = () => {
+  console.log('foo');
+}
+      </code>
+    </pre> #}
