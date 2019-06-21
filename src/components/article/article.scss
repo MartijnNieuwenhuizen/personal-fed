@@ -3,14 +3,13 @@
   max-width: 50rem;
   margin: 0 auto;
 
-  &__foo,
   &__header,
   &__aside,
   &__tags {
     display: flex;
   }
 
-  &__foo-wrapper {
+  &__aside-wrapper {
     position: absolute;
     top: -9rem;
     bottom: -9rem;
@@ -28,12 +27,12 @@
     }
   }
 
-  &__foo {
-    padding: 1rem 10rem;
+  // &__foo {
+  //   padding: 1rem 10rem;
 
-    transform: rotate(90deg);
-    transform-origin: left top;
-  }
+  //   transform: rotate(90deg);
+  //   transform-origin: left top;
+  // }
 
   &__main {
     padding: 1rem;
