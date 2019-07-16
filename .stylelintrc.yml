@@ -1,5 +1,6 @@
 plugins:
   - stylelint-scss
+  - stylelint-declaration-use-variable
 
 # Rules in StyleLint are grouped by category
 #  All rules related to formatting or style are disabled,

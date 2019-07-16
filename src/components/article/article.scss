@@ -1,87 +1,108 @@
 .article {
   position: relative;
-  max-width: 50rem;
-  margin: 0 auto;
 
-  &__header,
-  &__aside,
-  &__tags {
-    display: flex;
+  &__main {
+    opacity: 0;
+    animation: fade-in $pace-normal $delay-long $ease-in-out forwards,
+      move-from-below $pace-normal $delay-long $ease-in-out both;
+
+    @include breakpoint($breakpoint-m) {
+      > p:first-of-type {
+        transform: translateX(10vw);
+      }
+    }
   }
 
-  &__aside-wrapper {
-    position: absolute;
-    top: -9rem;
-    bottom: -9rem;
-    left: -8.5rem;
-    width: 9rem;
+  &__header {
+    @include breakpoint($breakpoint-l) {
+      max-width: 90rem;
+      display: flex;
+      align-items: flex-end;
+      margin: 0 auto;
+    }
+  }
+  &__header-item {
+    padding: 1rem;
+  }
 
-    background-color: $color-primary;
+  &__aside {
+    position: absolute;
+    top: -12rem;
+    bottom: -12rem;
+    left: 0;
+    width: 1.7rem;
+
+    background-color: rgba($color-primary, 0.5);
 
     opacity: 0;
     animation: fade-in $pace-slow $delay-default $ease-in-out forwards,
       create-from-top $pace-slower $delay-default $ease-in-out forwards;
 
     @include breakpoint($breakpoint-l) {
-      left: -13rem;
+      z-index: -1;
+      width: 9rem;
+      left: 8vw;
     }
   }
 
-  // &__foo {
-  //   padding: 1rem 10rem;
+  // Generic article tags
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  code,
+  img,
+  figure {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-  //   transform: rotate(90deg);
-  //   transform-origin: left top;
-  // }
+    @include breakpoint($breakpoint-s) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
 
-  &__main {
-    padding: 1rem;
+    @include breakpoint($breakpoint-m) {
+      max-width: 45rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 8vw;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: $spacing-xxxxl;
+  }
+
+  p {
     font-size: 1.2rem;
     line-height: 1.8;
 
-    opacity: 0;
-    animation: fade-in $pace-normal $delay-long $ease-in-out forwards,
-      move-from-below $pace-normal $delay-long $ease-in-out both;
-
-    @include breakpoint($breakpoint-s) {
-      padding: 1rem 2rem;
-    }
     @include breakpoint($breakpoint-m) {
-      padding: 1rem 4rem;
-      font-size: 1.5rem;
-    }
-    @include breakpoint($breakpoint-l) {
-      padding: 1rem 4rem 1rem 7rem;
-      margin: 0 -3rem 0 0;
-    }
-
-    p:first-of-type {
-      font-weight: $font-weight-bold;
-    }
-
-    p:first-of-type::first-letter {
-      float: left;
-      margin: -0.5rem 0 0;
-      padding: 0 1rem 0 0;
-
-      font-size: 400%;
-      line-height: 1;
-
-      color: $color-primary;
-    }
-
-    @include breakpoint($breakpoint-m) {
-      p:not(:first-of-type) {
-        @supports (hyphens: auto) {
-          text-align: justify;
-          hyphens: auto;
-        }
-      }
-    }
-
-    h2 {
-      margin-top: $spacing-xxxxl;
+      font-size: 1.4rem;
     }
   }
 }

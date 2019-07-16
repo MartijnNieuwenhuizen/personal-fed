@@ -1,42 +1,21 @@
 <article class="article">
-  <div class="article__aside-wrapper">
-    {# <header class="article__header">
-      <h1 class="article__title">{{ title }}</h1>
-    </header>
-
-    <aside class="article__aside">
-      <time class="article__date">{{ date }}</time>
-      <ol class="article__tags">
-        <li>
-          <a href="">#Foo</a>
-        </li>
-        <li>
-          <a href="">#Bar</a>
-        </li>
-      </ol>
-    </aside> #}
-  </div>
+  <div class="article__aside"></div>
 
   <div class="article__main">
+    <div class="article__header">
+      <header class="article__header-item">
+        <h1>{{ title }}</h1>
+      </header>
+
+      <p class="article__header-item">
+        GitHub gives you the possibility to create an infinite amount of branches, but why should you use to do that? After a talk I had at GitHub Amsterdam, this became clear to me and I would like to share it with you because it improved my working process.
+      </p>
+    </div>
+
     {{ article | safe }}
     {{ article | safe }}
     {{ article | safe }}
     {{ article | safe }}
     {{ article | safe }}
   </div>
-
-  <footer></footer>
 </article>
-{#
-
-  <div class="article__body"></div>
-
-{{ article | safe }}
-    <pre>
-      <code>
-const foo = 'bar';
-const bar = () => {
-  console.log('foo');
-}
-      </code>
-    </pre> #}
