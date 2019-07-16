@@ -1,17 +1,17 @@
 .article-prev {
   @include fat-border;
   position: relative;
-  padding: $spacing-m;
+  padding: var(--spacing-m);
 
   &__title {
     @include header-xxl;
-    margin: 0 0 $spacing-s;
+    margin: 0 0 var(--spacing-s);
 
     &:before {
       @include colored-square {
         bottom: 0;
-        left: $spacing-xs;
-        transform: translate(0, $spacing-xxl) scale(0.1);
+        left: var(--spacing-xs);
+        transform: translate(0, var(--spacing-xxl)) scale(0.1);
       }
     }
   }
@@ -26,7 +26,7 @@
   &__reading-time {
     position: absolute;
     top: 0;
-    right: $spacing-m;
+    right: var(--spacing-m);
   }
 
   &__link {

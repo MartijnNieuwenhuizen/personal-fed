@@ -1,7 +1,7 @@
 .nav {
   &__list {
     margin: 0;
-    padding: 0 $spacing-m;
+    padding: 0 var(--spacing-m);
     display: flex;
     justify-content: center;
   }
@@ -16,15 +16,15 @@
     padding: 1rem;
     color: inherit;
     text-decoration: none;
-    font-family: $font-family-serif;
+    font-family: var(--font-family-serif);
     font-style: italic;
-    font-size: $font-size-l;
+    font-size: var(--font-size-l);
 
     &:before {
       @include colored-square {
         bottom: 0;
         right: 0;
-        transform: translate(80%, $spacing-xxl) scale(0.1);
+        transform: translate(80%, var(--spacing-xxl)) scale(0.1);
       }
     }
 

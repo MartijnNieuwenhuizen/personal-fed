@@ -36,7 +36,7 @@ article {
 
 pre code {
   display: block;
-  padding: $spacing-xl;
+  padding: var(--spacing-xl);
   overflow-x: auto;
-  border: 5px solid $color-black;
+  border: 5px solid var(--color-black);
 }
