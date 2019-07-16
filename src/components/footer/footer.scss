@@ -4,13 +4,13 @@
   align-self: center;
 
   &__link {
-    color: $color-black;
+    color: var(--color-black);
 
-    transition: $pace-fast $ease-in-out color;
+    transition: var(--pace-fast) var(--ease-in-out) color;
 
     &:hover,
     &:focus {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }

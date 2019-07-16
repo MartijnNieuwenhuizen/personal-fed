@@ -1,7 +1,7 @@
 .nav {
   &__list {
     margin: 0;
-    padding: 0 $spacing-m;
+    padding: 0 var(--spacing-m);
     display: flex;
     justify-content: center;
   }
@@ -24,7 +24,7 @@
       @include colored-square {
         bottom: 0;
         right: 0;
-        transform: translate(80%, $spacing-xxl) scale(0.1);
+        transform: translate(80%, var(--spacing-xxl)) scale(0.1);
       }
     }
 

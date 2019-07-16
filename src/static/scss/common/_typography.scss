@@ -1,49 +1,50 @@
-$font-family-serif: 'Ideal Sans';
-// $font-family-serif: serif;
-$font-family-sans-serif: 'Helvetica';
+&:root {
+  --font-family-serif: 'Ideal Sans';
+  --font-family-sans-serif: 'Helvetica';
 
-$font-size-xxl: 46px;
-$font-size-xl: 32px;
-$font-size-l: 26px;
-$font-size-m: 20px;
-$font-size-s: 16px;
-$font-size-xs: 12px;
-$base-font-size: $font-size-m;
+  --font-size-xxl: 46px;
+  --font-size-xl: 32px;
+  --font-size-l: 26px;
+  --font-size-m: 20px;
+  --font-size-s: 16px;
+  --font-size-xs: 12px;
+  --base-font-size: var(--font-size-m);
 
-$font-weight-normal: normal;
-$font-weight-bold: bold;
-$font-weight-bolder: bolder;
+  --font-weight-normal: normal;
+  --font-weight-bold: bold;
+  --font-weight-bolder: bolder;
+}
 
 @mixin header-xxl {
-  font-size: $font-size-xxl;
-  font-family: $font-family-serif;
+  font-size: var--(font-size-xxl);
+  font-family: var--(font-family-serif);
   font-weight: bold;
   font-style: italic;
 }
 
 @mixin header-xl {
-  font-size: $font-size-xl;
-  font-family: $font-family-serif;
+  font-size: var--(font-size-xl);
+  font-family: var--(font-family-serif);
   font-weight: bold;
   font-style: italic;
 }
 
 @mixin header-l {
-  font-size: $font-size-l;
-  font-family: $font-family-serif;
+  font-size: var--(font-size-l);
+  font-family: var--(font-family-serif);
   font-weight: bold;
   font-style: italic;
 }
 
 @mixin header-m {
-  font-size: $font-size-m;
-  font-family: $font-family-serif;
+  font-size: var--(font-size-m);
+  font-family: var--(font-family-serif);
   font-weight: bold;
   font-style: italic;
 }
 
 body {
-  font-family: $font-family-sans-serif, sans-serif;
+  font-family: var(--font-family-sans-serif), sans-serif;
   line-height: 1.5;
 }
 
@@ -70,5 +71,5 @@ h6,
 }
 
 .section-title {
-  padding: 0 $spacing-m;
+  padding: 0 var(--spacing-m);
 }
