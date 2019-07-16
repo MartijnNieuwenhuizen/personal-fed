@@ -3,8 +3,10 @@
 
   &__main {
     opacity: 0;
-    animation: fade-in $pace-normal $delay-long $ease-in-out forwards,
-      move-from-below $pace-normal $delay-long $ease-in-out both;
+    animation: fade-in var(--pace-normal) var(--delay-long) var(--ease-in-out)
+        forwards,
+      move-from-below var(--pace-normal) var(--delay-long) var(--ease-in-out)
+        both;
 
     @include breakpoint($breakpoint-m) {
       > p:first-of-type {
@@ -32,11 +34,13 @@
     left: 0;
     width: 1.7rem;
 
-    background-color: rgba($color-primary, 0.5);
+    background-color: var(--color-primary-lighter);
 
     opacity: 0;
-    animation: fade-in $pace-slow $delay-default $ease-in-out forwards,
-      create-from-top $pace-slower $delay-default $ease-in-out forwards;
+    animation: fade-in var(--pace-slow) var(--delay-default) var(--ease-in-out)
+        forwards,
+      create-from-top var(--pace-slower) var(--delay-default) var(--ease-in-out)
+        forwards;
 
     @include breakpoint($breakpoint-l) {
       z-index: -1;
@@ -94,7 +98,7 @@
   h4,
   h5,
   h6 {
-    margin-top: $spacing-xxxxl;
+    margin-top: var(--spacing-xxxxl);
   }
 
   p {

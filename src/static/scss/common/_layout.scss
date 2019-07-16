@@ -13,14 +13,14 @@
 }
 
 .constrain--s {
-  max-width: $constrain-s;
+  max-width: var(--constrain-s);
   margin: 0 auto;
 }
 .constrain {
-  max-width: $constrain-m;
+  max-width: var(--constrain-m);
   margin: 0 auto;
 }
 .constrain--l {
-  max-width: $constrain-l;
+  max-width: var(--constrain-l);
   margin: 0 auto;
 }
