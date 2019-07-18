@@ -83,6 +83,18 @@
     }
   }
 
+  img {
+    display: block;
+    // width: 100%;
+
+    @include breakpoint($breakpoint-m) {
+      // margin-left: -1rem;
+      // margin-right: -1rem;
+      // width: 110%;
+      // transform: translateX(-5%);
+    }
+  }
+
   h1,
   h2,
   h3,
