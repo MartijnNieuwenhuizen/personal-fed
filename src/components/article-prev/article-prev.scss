@@ -3,9 +3,15 @@
   position: relative;
   padding: var(--spacing-m);
 
+  @include breakpoint($breakpoint-m) {
+    padding: var(--spacing-xxl) var(--spacing-m);
+  }
+
   &__title {
     @include header-xxl;
-    margin: 0 0 var(--spacing-s);
+    margin: 0;
+    letter-spacing: var(--letter-spacing-m);
+    font-weight: var(--font-weight-default);
 
     &:before {
       @include colored-square {
