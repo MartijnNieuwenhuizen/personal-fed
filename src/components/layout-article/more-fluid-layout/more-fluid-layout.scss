@@ -1,0 +1,58 @@
+@keyframes more-fluid-layout {
+  0%,
+  100% {
+    transform-origin: left;
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    transform-origin: left;
+    transform: scale3d(0.83, 1, 1);
+  }
+  40% {
+    transform-origin: left;
+    transform: scale3d(0.6, 1, 1);
+  }
+}
+@keyframes increase-inner {
+  0%,
+  100% {
+    transform-origin: left;
+    width: 80%;
+  }
+  20% {
+    transform-origin: left;
+    width: 80%;
+  }
+  40% {
+    transform-origin: left;
+    width: 55%;
+  }
+}
+
+.more-fluid-layout {
+  position: relative;
+  height: 20vh;
+
+  &__outer {
+    @include layout-article-img-border;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    animation: 2.5s more-fluid-layout infinite;
+  }
+
+  &__inner {
+    @include layout-article-img-border;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: 80%;
+    height: calc(100% - 0.8rem);
+
+    border-color: var(--color-primary);
+    animation: 2.5s increase-inner infinite;
+  }
+}

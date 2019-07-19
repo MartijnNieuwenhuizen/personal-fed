@@ -64,7 +64,10 @@
   blockquote,
   code,
   img,
-  figure {
+  figure,
+  ol,
+  ul,
+  .article__main-item {
     max-width: 35rem;
     margin-left: auto;
     margin-right: auto;
@@ -118,12 +121,23 @@
     margin-top: var(--spacing-xxxxl);
   }
 
-  p {
+  p,
+  li {
     font-size: 1.2rem;
     line-height: 2.1;
 
     @include breakpoint($breakpoint-m) {
       font-size: 1.4rem;
     }
+  }
+
+  code {
+    display: inline-block;
+    margin: 0;
+    padding: 0 var(--spacing-s);
+
+    color: var(--color-secondary);
+    background-color: var(--color-gray-lighter);
+    border-radius: 5px;
   }
 }

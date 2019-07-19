@@ -1,0 +1,37 @@
+.distance-between-elements {
+  &__container {
+    @include layout-article-img-border;
+    padding: 0.3rem;
+  }
+
+  &__item {
+    @include layout-article-img-border;
+    height: 10vh;
+  }
+
+  &__distance {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color-primary);
+    transition: 0.3s height var(--ease-in-out);
+
+    &[data-type='small'] {
+      height: 1rem;
+    }
+    &[data-type='medium'] {
+      height: 2rem;
+    }
+    &[data-type='large'] {
+      height: 3rem;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem;
+  }
+  &__control {
+    margin: 0 0.3rem;
+  }
+}
