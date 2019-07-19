@@ -75,10 +75,11 @@
     <p>Then there is the flow in the layout. When using flexbox you can decide to align all your items left, center or right.
     </p>
     <div class="article__main-item">
-      [ADD IMAGE HERE]
+      {%- component 'layout-article/flow-in-layout' -%}
+      <small>The flow in the layout.</small>
     </div>
     <p>
-      These three factors (constraints, distance and flow) produce
+      These three factors; constraints, distance and flow produce
       <strong>the layout</strong>.
     </p>
 
@@ -173,7 +174,8 @@
     <h3>Component based approach</h3>
     <p>A more rigged system would be to pour your components into another component that handles the layout. A nice example is the following layout.</p>
     <div class="article__main-item">
-      [SHOW LANXESS GRID]
+      {%- component 'layout-article/more-complex-layout' -%}
+      <small>A more complex layout.</small>
     </div>
     <p>This is a more [dynamic] layout that's reused on multiple places and contains all sorts of different components.</p>
 

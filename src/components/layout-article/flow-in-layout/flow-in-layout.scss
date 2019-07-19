@@ -1,28 +1,29 @@
-.distance-between-elements {
+.flow-in-layout {
   &__container {
     @include layout-article-img-border;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0.3rem;
+
+    &[data-type='left'] {
+      justify-content: flex-start;
+    }
+    &[data-type='center'] {
+      justify-content: center;
+    }
+    &[data-type='right'] {
+      justify-content: flex-end;
+    }
   }
 
   &__item {
     @include layout-article-img-border;
+    width: 33%;
     height: 10vh;
-  }
 
-  &__distance {
-    width: 100%;
-    height: 3rem;
-    background-color: var(--color-primary);
-    transition: 0.3s height var(--ease-in-out);
-
-    &[data-type='small'] {
-      height: 1rem;
-    }
-    &[data-type='medium'] {
-      height: 2.5rem;
-    }
-    &[data-type='large'] {
-      height: 4rem;
+    &:last-of-type {
+      border-color: var(--color-primary);
     }
   }
 
