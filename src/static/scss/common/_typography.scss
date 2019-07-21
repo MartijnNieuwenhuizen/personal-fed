@@ -1,6 +1,5 @@
 :root {
   --font-family-serif: 'Ideal Sans';
-  // --font-family-sans-serif: 'Helvetica';
   --font-family-sans-serif: 'Lato', 'Helvetica', 'Arial';
 
   --font-size-xxl: 46px;
@@ -11,9 +10,9 @@
   --font-size-xs: 12px;
   --base-font-size: var(--font-size-m);
 
+  --font-weight-default: normal;
   --font-weight-normal: normal;
   --font-weight-bold: bold;
-  --font-weight-bolder: bolder;
 
   --letter-spacing-s: 2px;
   --letter-spacing-m: 4px;
@@ -23,28 +22,28 @@
 @mixin header-xxl {
   font-size: var(--font-size-xxl);
   font-family: var(--font-family-serif);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-style: italic;
 }
 
 @mixin header-xl {
   font-size: var(--font-size-xl);
   font-family: var(--font-family-serif);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-style: italic;
 }
 
 @mixin header-l {
   font-size: var(--font-size-l);
   font-family: var(--font-family-serif);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-style: italic;
 }
 
 @mixin header-m {
   font-size: var(--font-size-m);
   font-family: var(--font-family-serif);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-style: italic;
 }
 
