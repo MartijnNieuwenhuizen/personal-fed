@@ -20,7 +20,9 @@ class DistanceBetweenElements {
     this._triggers = Array.from(
       this._element.querySelectorAll(this._options.triggers)
     )
-    this._target = this._element.querySelector(this._options.target)
+    this._target = Array.from(
+      this._element.querySelectorAll(this._options.target)
+    )
   }
 
   _setEventListeners() {
@@ -42,7 +44,7 @@ class DistanceBetweenElements {
   }
 
   _setType(value) {
-    this._target.setAttribute('data-type', value)
+    this._target.forEach(target => target.setAttribute('data-type', value))
   }
 }
 
