@@ -1,4 +1,9 @@
 {
+  "header": {
+    "nav": {
+      "articlesActive": true
+    }
+  },
   "article": {
     "title": "You should use the GitHub branches",
     "date": "02-07-2016",

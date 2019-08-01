@@ -1,10 +1,10 @@
 {% extends './default.njk' %}
 
 {% block body %}
-  {%- component 'header' -%}
+  {%- component 'header', header -%}
   <div class="detail">
     <main class="content-item">
-      {%- component 'article', article -%}
+      {%- component 'coming-soon' -%}
     </main>
 
     <div class="content-item">
