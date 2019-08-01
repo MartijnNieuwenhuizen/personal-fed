@@ -1,7 +1,6 @@
 :root {
-  --font-family-serif: 'Ideal Sans';
-  // --font-family-sans-serif: 'Helvetica';
-  --font-family-sans-serif: 'Lato', 'Helvetica', 'Arial';
+  --font-family-serif: 'Crimson-Text', serif;
+  --font-family-sans-serif: 'Lato', 'Helvetica', 'Arial', sans-serif;
 
   --font-size-xxl: 46px;
   --font-size-xl: 32px;
@@ -11,13 +10,48 @@
   --font-size-xs: 12px;
   --base-font-size: var(--font-size-m);
 
-  --font-weight-normal: normal;
-  --font-weight-bold: bold;
-  --font-weight-bolder: bolder;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
   --letter-spacing-s: 2px;
   --letter-spacing-m: 4px;
   --letter-spacing-l: 6px;
+}
+
+@font-face {
+  font-family: 'Crimson-Text';
+  src: url('crimsontext-bolditalic-webfont.woff2') format('woff2'),
+    url('crimsontext-bolditalic-webfont.woff') format('woff'),
+    url('crimsontext-bolditalic-webfont.ttf') format('truetype');
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Crimson-Text';
+  src: url('crimsontext-regularitalic-webfont.woff2') format('woff2'),
+    url('crimsontext-regularitalic-webfont.woff') format('woff'),
+    url('crimsontext-regularitalic-webfont.ttf') format('truetype');
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'latobold';
+  src: url('lato-bold-webfont.woff2') format('woff2'),
+    url('lato-bold-webfont.woff') format('woff'),
+    url('lato-bold-webfont.ttf') format('truetype');
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('lato-regular-webfont.woff2') format('woff2'),
+    url('lato-regular-webfont.woff') format('woff'),
+    url('lato-regular-webfont.ttf') format('truetype');
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
 }
 
 @mixin header-xxl {
@@ -25,6 +59,7 @@
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-style: italic;
+  color: var(--color-primary-extra-dark);
 }
 
 @mixin header-xl {
@@ -32,6 +67,7 @@
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-style: italic;
+  color: var(--color-primary-extra-dark);
 }
 
 @mixin header-l {
@@ -39,6 +75,7 @@
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-style: italic;
+  color: var(--color-primary-extra-dark);
 }
 
 @mixin header-m {
@@ -46,6 +83,7 @@
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-style: italic;
+  color: var(--color-primary-extra-dark);
 }
 
 body {
