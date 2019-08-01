@@ -16,9 +16,9 @@
     padding: 1rem;
     color: inherit;
     text-decoration: none;
-    font-family: var(--font-family-serif);
-    font-style: italic;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
+    font-family: var(--font-family-sans-serif);
+    letter-spacing: var(--letter-spacing-s);
 
     &:before {
       @include colored-square {
