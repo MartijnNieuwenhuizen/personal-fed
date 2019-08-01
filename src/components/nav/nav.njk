@@ -1,14 +1,21 @@
 <nav class="nav">
   <ol class="nav__list">
-    {% for item in items %}
-      {%- set classes = {
+    {%- set articlesClasses = {
         'nav__link': true,
-        'nav__link--active': item.active === true
+        'nav__link--active': articlesActive === true
       } | classes -%}
 
-      <li class="nav__item">
-        <a class="{{ classes }}" href="{{ item.href }}">{{ item.label }}</a>
-      </li>
-    {% endfor %}
+    {%- set playgroundClasses = {
+        'nav__link': true,
+        'nav__link--active': playgroundActive === true
+      } | classes -%}
+
+    <li class="nav__item">
+      <a class="{{ articlesClasses }}" href="{{ articlesHref }}">{{ articlesLabel }}</a>
+    </li>
+
+    <li class="nav__item">
+      <a class="{{ playgroundClasses }}" href="{{ playgroundHref }}">{{ playgroundLabel }}</a>
+    </li>
   </ol>
 </nav>

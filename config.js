@@ -48,7 +48,7 @@ module.exports = {
 
   docs: {
     src: {
-      index: `${base.docs}/index.njk`,
+      index: `${base.docs}/component-lib.njk`,
       indexDir: base.docs,
       layoutDir: `${base.docs}/layout`,
       templates: `${base.src}/templates`,
@@ -61,7 +61,7 @@ module.exports = {
     },
     dist: {
       base: base.dist,
-      index: `${base.dist}/index.html`,
+      index: `${base.dist}/component-lib.html`,
       static: `${base.dist}/docs/static/`,
       components: `${base.dist}/docs/components/`
     },
@@ -107,7 +107,7 @@ module.exports = {
       componentsData: `${base.src}/components/**/*.json`
     },
     dist: {
-      base: `${base.dist}/templates`
+      base: base.dist
     },
     baseUri: '/'
   },
