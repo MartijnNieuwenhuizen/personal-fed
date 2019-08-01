@@ -112,6 +112,12 @@ module.exports = {
     baseUri: '/'
   },
 
+  articles: {
+    config: `${base.src}/data/articles.json`,
+    templateSrc: `${base.src}/templates/detail.njk`,
+    dist: `${base.dist}/articles`
+  },
+
   img: {
     src: {
       all: `${base.src}/static/img/**/*.{svg,png,jpg,gif,webp}`

@@ -15,6 +15,8 @@ import { js, jsLint, jsTest } from './tasks/js'
 import { fileUpload } from './tasks/upload'
 import { githooks } from './tasks/githooks'
 import { zip } from './tasks/zip'
+import { markdown } from './tasks/markdown'
+import { renderArticles } from './tasks/renderArticles'
 
 function dev(cb) {
   return series(
@@ -30,6 +32,11 @@ function dev(cb) {
       fontsWatch
     )
   )(cb)
+}
+
+function articles(cb) {
+  // return series(markdown, renderArticles)(cb)
+  return series(renderArticles)(cb)
 }
 
 function dist(cb) {
@@ -56,5 +63,6 @@ export {
   dist,
   codequality,
   test,
-  upload
+  upload,
+  articles
 }

@@ -1,12 +1,10 @@
-{# import beAsWideAsYouCan from '../layout-article/be-as-wide-as-you-can' #}
-
 <article class="article">
   <div class="article__aside"></div>
 
   <div class="article__main">
     <div class="article__header">
       <header class="article__header-item">
-        <h1>How to handle layout</h1>
+        <h1>How to apply layout</h1>
         <p>Two way's of doing it well.</p>
       </header>
 
@@ -29,7 +27,7 @@
     </div>
 
     <h3>Rule 2: Don't influence the layout</h3>
-    <p>A component should never have an influence to the layout it’s in. This is the job of the layout and by influencing, you will break it.</p>
+    <p>A component should never influence the layout it’s in. The placing of components if the job of the layout and by influencing, you will break the styling.</p>
     <div class="article__main-item">
       {%- component 'layout-article/dont-influence-the-layout' -%}
       <small>Don't influence the layout</small>
