@@ -9,7 +9,7 @@ const classesFilter = config =>
 
 classesFilter.safe = true
 
-module.exports = env => {
+export default env => {
   // IncludeData plugin
   includeData.install(env)
 
