@@ -2,10 +2,15 @@
   "articles": [
     {
       "src": "/layout",
-      "fileName": "layout-in-a-design-system.md",
-      "title": "How to apply layout",
-      "date": "01-08-2019",
-      "readingTime": "5"
+      "fileName": "how-to-apply-layout.md",
+      "article": {
+        "readingTime": "5",
+        "date": "02-07-2016",
+        "title": "How to apply layout",
+        "subTitle": "Two way's of doing it well.",
+        "intro":
+          "<strong>A design system is a collection of components.</strong> Each component solves a different problem and each has a list of rules on when and how it should be used. A component is also not aware of its surroundings, therefor it doesn't matter, for the component, where you place it on the page. It should always work."
+      }
     }
   ]
 }

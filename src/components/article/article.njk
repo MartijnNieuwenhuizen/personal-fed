@@ -13,6 +13,11 @@
       </p>
     </div>
 
-    {{ body | safe }}
+    {%- if bodyComponentName === 'how-to-apply-layout' -%}
+
+      {%- component 'articles/how-to-apply-layout' -%}
+
+    {%- endif -%}
+
   </div>
 </article>

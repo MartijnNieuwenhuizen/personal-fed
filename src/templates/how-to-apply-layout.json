@@ -10,6 +10,6 @@
     "subTitle": "Two way's of doing it well.",
     "intro":
       "<strong>A design system is a collection of components.</strong> Each component solves a different problem and each has a list of rules on when and how it should be used. A component is also not aware of its surroundings, therefor it doesn't matter, for the component, where you place it on the page. It should alway's work.",
-    "body": ""
+    "bodyComponentName": "how-to-apply-layout"
   }
 }

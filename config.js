@@ -115,7 +115,7 @@ module.exports = {
   articles: {
     config: `${base.src}/data/articles.json`,
     templateSrc: `${base.src}/templates/detail.njk`,
-    dist: `${base.dist}/articles`
+    dist: `${base.src}/components/articles`
   },
 
   img: {
