@@ -13,11 +13,8 @@
       </p>
     </div>
 
-    {%- if bodyComponentName === 'how-to-apply-layout' -%}
-
-      {%- component 'articles/how-to-apply-layout' -%}
-
-    {%- endif -%}
+    {%- set componentPathWithPrefix = "articles/" + bodyComponentName  -%}
+    {%- component componentPathWithPrefix -%}
 
   </div>
 </article>
