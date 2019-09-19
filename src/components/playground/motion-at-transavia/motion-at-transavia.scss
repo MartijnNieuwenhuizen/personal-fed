@@ -7,6 +7,21 @@
   }
 }
 
+@keyframes move-with-overflow {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-0.3rem);
+  }
+  90% {
+    transform: translateX(calc(50vw + 0.3rem));
+  }
+  100% {
+    transform: translateX(50vw);
+  }
+}
+
 .motion-at-transavia {
   // Transition easing (source: https://easings.net)
   --ease-in: cubic-bezier(0.47, 0, 0.745, 0.715); // ease-in-sine
@@ -57,6 +72,10 @@
     }
     &[data-ease='bounce-in-out'] {
       animation-timing-function: var(--bounce-in-out);
+    }
+
+    &[data-overflow='true'] {
+      animation-name: move-with-overflow;
     }
   }
 }
