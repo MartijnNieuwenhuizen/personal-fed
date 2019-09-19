@@ -1,0 +1,13 @@
+{
+  "header": {
+    "nav": {
+      "articlesActive": true
+    }
+  },
+  "articleHeader": {
+    "title": "How to manage layout in a design system",
+    "subTitle": "Two way's of doing it well.",
+    "intro": "<strong>A design system is a collection of components.</strong> Each component solves a different problem and each has a list of rules on when and how it should be used. A component is also not aware of its surroundings, therefor it doesn't matter, for the component, where you place it on the page. It should always work.",
+    "date": "19-09-2019"
+  }
+}
