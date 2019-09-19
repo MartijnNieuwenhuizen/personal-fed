@@ -1,0 +1,54 @@
+<article class="layout-at-transavia">
+  <header class="page-item constrain--s">
+    <h1>layout at Transavia</h1>
+
+    <p>For the theory behind this system you can read
+      <a href="/how-to-manage-layout-in-a-design-system.html">How to manage layout in a design system</a>
+    </p>
+
+    <h2>The four constrains</h2>
+    <p>The design is based on a 12 column grid, but for the Front-end we only use three widths. These widths are based on that 12 column grid. Next to the three sizes, we have a full page block for colored backgrounds etc.</p>
+    <p>For each item a margin is set in case there are multiple of the same items after each other.</p>
+  </header>
+
+  <section class="section-item">
+    <div class="constrain--s">
+      <h3>Full width item</h3>
+      <p>Used for colored blocks, large commercial images etc.</p>
+    </div>
+
+    <div class="layout-at-transavia__constrain"></div>
+  </section>
+
+  <section class="section-item">
+    <div class="constrain--s">
+      <h3>Page item</h3>
+      <p>Used for the largest items on the page like search forms, carousels etc.</p>
+    </div>
+
+    <div class="layout-at-transavia__constrain layout-at-transavia__page-item"></div>
+    <div class="layout-at-transavia__constrain layout-at-transavia__page-item"></div>
+  </section>
+
+  <section class="section-item">
+    <div class="constrain--s">
+      <h3>section item</h3>
+      <p>Used for each section on the page like each search result</p>
+    </div>
+
+    <div class="layout-at-transavia__constrain layout-at-transavia__section-item"></div>
+    <div class="layout-at-transavia__constrain layout-at-transavia__section-item"></div>
+  </section>
+
+  <section class="section-item">
+    <div class="constrain--s">
+      <h3>Text item</h3>
+      <p>Used for each text element on the page that is not inside an
+        <code>article</code>.
+      </p>
+    </div>
+
+    <div class="layout-at-transavia__constrain layout-at-transavia__text-item"></div>
+    <div class="layout-at-transavia__constrain layout-at-transavia__text-item"></div>
+  </section>
+</article>
