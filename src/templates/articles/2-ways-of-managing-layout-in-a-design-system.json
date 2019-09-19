@@ -1,0 +1,13 @@
+{
+  "header": {
+    "nav": {
+      "articlesActive": true
+    }
+  },
+  "articleHeader": {
+    "title": "2 ways of managing layout in a design system",
+    "subTitle": ".......",
+    "intro": "A design system is a way to create and manage a cohesive design. Each component in there is meticulously created, tested and adjusted to fit the brand and the platform’s need. But What about the the glue that sticks all these components together, <strong>the layout</strong>? How should you manage this? And what happens if you don’t.",
+    "date": "19-09-2019"
+  }
+}
