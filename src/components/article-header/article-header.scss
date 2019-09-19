@@ -1,0 +1,16 @@
+.article-header {
+  @include breakpoint($breakpoint-l) {
+    max-width: 90rem;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 1rem;
+  }
+
+  p {
+    letter-spacing: var(--letter-spacing-s);
+  }
+}

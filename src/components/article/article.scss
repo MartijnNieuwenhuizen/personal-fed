@@ -15,22 +15,6 @@
     }
   }
 
-  &__header {
-    @include breakpoint($breakpoint-l) {
-      max-width: 90rem;
-      display: flex;
-      align-items: flex-end;
-      margin: 0 auto;
-    }
-
-    p {
-      letter-spacing: var(--letter-spacing-s);
-    }
-  }
-  &__header-item {
-    padding: 1rem;
-  }
-
   &__aside {
     position: absolute;
     top: -12rem;
@@ -88,14 +72,6 @@
 
   img {
     display: block;
-    // width: 100%;
-
-    @include breakpoint($breakpoint-m) {
-      // margin-left: -1rem;
-      // margin-right: -1rem;
-      // width: 110%;
-      // transform: translateX(-5%);
-    }
   }
 
   h1,

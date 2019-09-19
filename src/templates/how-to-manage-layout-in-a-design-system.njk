@@ -1,0 +1,19 @@
+{% extends './default.njk' %}
+
+{% block body %}
+  {%- component 'header', header -%}
+
+  <main class="content-item">
+    <article class="article">
+      <div class="article__aside"></div>
+      <div class="article__main">
+        {%- component 'article-header', articleHeader -%}
+        {%- component 'layout-article/body' -%}
+      </div>
+    </article>
+  </main>
+
+  <div class="content-item">
+    {%- component 'footer' -%}
+  </div>
+{% endblock %}
