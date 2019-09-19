@@ -11,11 +11,11 @@
   0% {
     transform: translateX(0);
   }
-  10% {
-    transform: translateX(-0.3rem);
+  20% {
+    transform: translateX(-0.2rem);
   }
   90% {
-    transform: translateX(calc(50vw + 0.3rem));
+    transform: translateX(calc(50vw + 0.2rem));
   }
   100% {
     transform: translateX(50vw);
@@ -77,5 +77,9 @@
     &[data-overflow='true'] {
       animation-name: move-with-overflow;
     }
+  }
+
+  &__sub-title {
+    margin: 0;
   }
 }

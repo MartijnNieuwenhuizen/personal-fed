@@ -1,0 +1,42 @@
+.layout-at-transavia {
+  --transavia-constrain-xl: 80rem;
+  --transavia-constrain-l: 60rem;
+  --transavia-constrain-m: 46.5rem;
+  --transavia-constrain-s: 40rem;
+
+  --spacing-page-item: 7rem;
+  --spacing-section-item: 2.5rem;
+  --spacing-text-item: 0.5rem;
+
+  &__constrain {
+    background-color: var(--color-primary);
+    height: 10rem;
+  }
+
+  &__page-item {
+    max-width: var(--transavia-constrain-xl);
+    margin: 0 auto;
+
+    + .layout-at-transavia__page-item {
+      margin: var(--spacing-page-item) auto 0 auto;
+    }
+  }
+
+  &__section-item {
+    max-width: var(--transavia-constrain-l);
+    margin: 0 auto;
+
+    + .layout-at-transavia__section-item {
+      margin: var(--spacing-section-item) auto 0 auto;
+    }
+  }
+
+  &__text-item {
+    margin: 0 auto;
+    max-width: var(--transavia-constrain-s);
+
+    + .layout-at-transavia__text-item {
+      margin: var(--spacing-text-item) auto 0 auto;
+    }
+  }
+}

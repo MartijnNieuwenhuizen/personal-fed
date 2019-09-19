@@ -1,0 +1,13 @@
+{% extends './default.njk' %}
+
+{% block body %}
+  {%- component 'header', header -%}
+
+  <main>
+    {%- component 'playground/layout-at-transavia' -%}
+  </main>
+
+  <div class="content-item">
+    {%- component 'footer' -%}
+  </div>
+{% endblock %}
