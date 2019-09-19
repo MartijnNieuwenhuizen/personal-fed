@@ -1,5 +1,5 @@
 <ol class="article-list">
-  {% for article in articles %}
-    <li class="article-list__item">{%- component 'article-prev', article -%}</li>
+  {% for item in items %}
+    <li class="article-list__item">{%- component 'article-prev', item -%}</li>
   {% endfor %}
 </ol>

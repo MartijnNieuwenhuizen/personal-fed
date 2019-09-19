@@ -3,8 +3,10 @@
 {% block body %}
   {%- component 'header', header -%}
   <div class="detail">
-    <main class="content-item">
-      {%- component 'coming-soon' -%}
+    <main class="page-item">
+      <div class="constrain--s">
+        {%- component 'articles-list', '../../data/playground.json' -%}
+      </div>
     </main>
 
     <div class="content-item">

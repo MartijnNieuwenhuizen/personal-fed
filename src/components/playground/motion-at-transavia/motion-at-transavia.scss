@@ -1,0 +1,62 @@
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+
+.motion-at-transavia {
+  // Transition easing (source: https://easings.net)
+  --ease-in: cubic-bezier(0.47, 0, 0.745, 0.715); // ease-in-sine
+  --ease-out: cubic-bezier(0.39, 0.575, 0.565, 1); // ease-out-sine
+  --ease-in-out: cubic-bezier(0.785, 0.135, 0.15, 0.86); // ease-in-out-circ
+
+  --bounce-in: cubic-bezier(0.6, -0.28, 0.735, 0.045); // ease-in-back
+  --bounce-out: cubic-bezier(0.175, 0.885, 0.32, 1.275); // ease-out-back
+  --bounce-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.55); // ease-in-out-back
+
+  &__section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--spacing-xl);
+  }
+
+  &__motion-block {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    &[data-ease='in'] {
+      animation-timing-function: var(--ease-in);
+    }
+    &[data-ease='out'] {
+      animation-timing-function: var(--ease-out);
+    }
+    &[data-ease='in-out'] {
+      animation-timing-function: var(--ease-in-out);
+    }
+    &[data-ease='bounce-in'] {
+      animation-timing-function: var(--bounce-in);
+    }
+    &[data-ease='bounce-out'] {
+      animation-timing-function: var(--bounce-out);
+    }
+    &[data-ease='bounce-in-out'] {
+      animation-timing-function: var(--bounce-in-out);
+    }
+  }
+}
