@@ -104,7 +104,7 @@
   <section>
     <h3>Manage your layout by CSS classes</h3>
     <p>
-      For layouts that don’t have any flow, like blocks stacked on each other, I use CSS classes to control the layout. Just like utility classes. For the spacing I create three variables that reflect the type of element. The names are
+      For simple layout's, like blocks stacked on each other, I use CSS classes to control the layout. Just like utility classes. For the spacing I create three variables that reflect the type of element. The names are
       <code>.page-element</code>,
       <code>.section-element</code>
       and
@@ -114,6 +114,8 @@
       and
       <code>.text-constrain</code>.
     </p>
+
+    {# Add CSS example here #}
 
     <h4>The advantages</h4>
     <p>
@@ -149,12 +151,20 @@
     <p>
       The HTML in this example handles the layout. Each element will be evenly distributed and each component doesn’t need to have any knowledge of the layout it’s in.
     </p>
+
+    <h4>The disadvantage</h4>
+    <p>
+      If a layout needs some more configuration or contains the flow aspect, there are better suited solutions. That's because its error prone to add configuration (CCS class or data-element) to each direct child in the layout. It's easy to forget one direct child and break your layout.
+    </p>
   </section>
 
   <section>
     <h3>Manege your layout with components</h3>
+    <p>If a layout needs a lot of configuration, managing it by components it the way to go! Also if your layout contains Flow (grids), I use components to control the layout.
+    </p>
+
     <p>
-      For layouts that contain flow (grids), I use components to control the layout. If there are not to many of these components, I usually call them
+      If there are not to many of these components, I usually call them
       <code>grid-alpha</code>,
       <code>grid-beta</code>
       etc. If there are too many it’s a good idea to align the naming of the grids with the design team for consistency.
