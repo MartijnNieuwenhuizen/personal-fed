@@ -52,7 +52,7 @@
   ol,
   ul,
   .article__main-item {
-    max-width: 35rem;
+    // max-width: 35rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -64,7 +64,7 @@
     }
 
     @include breakpoint($breakpoint-m) {
-      max-width: 48rem;
+      // max-width: 48rem;
       padding-left: 3rem;
       padding-right: 3rem;
     }
@@ -80,13 +80,13 @@
   h4,
   h5,
   h6 {
-    line-height: 1.2;
+    // line-height: 1.2;
   }
 
   h1 {
-    margin: 0;
-    font-size: 8vw;
-    letter-spacing: var(--letter-spacing-xl);
+    // margin: 0;
+    // font-size: 8vw;
+    // letter-spacing: var(--letter-spacing-xl);
   }
 
   h2,
@@ -94,7 +94,7 @@
   h4,
   h5,
   h6 {
-    margin-top: var(--spacing-xxxxl);
+    // margin-top: var(--spacing-xxxxl);
   }
 
   p,

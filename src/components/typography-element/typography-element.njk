@@ -1,0 +1,26 @@
+<div class="typography-element">
+  <dl class="typography-element__definitions">
+    <dt>Default element:</dt>
+    <dd class="typography-element__definition">{{ element }}</dd>
+
+    {%- if styleClass -%}
+      <dt>class:</dt>
+      <dd class="typography-element__definition">.{{ styleClass }}</dd>
+    {%- endif -%}
+
+    <dt>Size:</dt>
+    <dd class="typography-element__definition">{{ fontSize }}</dd>
+
+    <dt>Font weight:</dt>
+    <dd class="typography-element__definition">{{ fontWeight }}</dd>
+  </dl>
+
+  <div class="typography-element__preview">
+    {% set className = '' %}
+    {%- if styleClass -%}
+      {% set className = styleClass %}
+    {%- endif -%}
+
+    <{{ element }} class="{{ className }}">{{ content | safe }}</ {{ element }}>
+  </div>
+</div>

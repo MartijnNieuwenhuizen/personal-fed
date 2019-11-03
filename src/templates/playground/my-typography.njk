@@ -1,0 +1,15 @@
+{% extends './default.njk' %}
+
+{% block body %}
+  {%- component 'header', header -%}
+
+  {# <main class="page-item"> #}
+  {# <div class="constrain--s"> #}
+  {%- component 'playground/my-typography' -%}
+  {# </div> #}
+  {# </main> #}
+
+  <div class="content-item">
+    {%- component 'footer' -%}
+  </div>
+{% endblock %}
