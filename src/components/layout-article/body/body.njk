@@ -1,203 +1,120 @@
 <p>
-  A component is therefor very flexible. To create this flexibility, two rules apply. By sticking to these rules, components are reusable, standalone blocks that can be reused everywhere.
+  A design system is a way to create and manage a cohesive design. Each component in a design system is meticulously created, tested and adjusted to fit the brand and the platform’s need. But what about the glue that sticks all these components together, the layout? How should you manage this? And what happens if you don’t!?
 </p>
 
-<h2>The rules</h2>
-<h3>Rule 1: Be as wide and high as you can</h3>
-<p>A component should be as wide and high as the container it's in and don't set any constraints for itself.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/be-as-wide-as-you-can' -%}
-  <small>Be as wide as you can</small>
-</div>
+<h2>What happens if you don’t manage your layout</h2>
+<p>Let’s start with the latest question,
+  <strong>"What happens if you don’t manage your layout"</strong>. In the first weeks of development, you won't notice anything, it’s when you start making changes further into the project, that you discover the mistake(problem). If you have no system to make sure the components on the page are evenly distributed, you will end up with a messy design because changing and updating elements has become tough. For instance; you want to change the distance between each section on the page, but find yourself updating the same value in multiple files. Eventually, you will end up with an unmanageable project where updates take way to much time.</p>
+<p>If you achieve to create and maintain a consistent layout, you will end up with a design where the visual hierarchy is clear and where changes to the layout are simple and quick.</p>
 
-<h3>Rule 2: Don't influence the layout</h3>
-<p>A component should never influence the layout it’s in. The placing of components if the job of the layout and by influencing, you will break the styling.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/dont-influence-the-layout' -%}
-  <small>Don't influence the layout</small>
-</div>
+<h3>What is "layout"?</h3>
+<p>So, how should you do this? To be able to answer this question I first want to explain the concept of "layout" to you. A layout exists out of three main elements. Constrains, spacing and flow.</p>
 
-<p>But what will define these rules?</p>
+<h3>Constrains</h3>
+<p>Constrains are the maximum sizes, either horizontally and vertically. You can think of the maximum width of a text or the max width of a section inside of a colored block on the homepage. Theses values will make sure your design won’t stretch too far on larger screens and fluidly wrap if there is space that allows it.</p>
 
-<h2>What is
-  <strong>the layout</strong>
-</h2>
-<p>There are three subject that are needed to create the layout.</p>
-<ol>
-  <li>Constrains, in width and sometimes height</li>
-  <li>Distance between the elements</li>
-  <li>The flow of the layout</li>
-</ol>
-
-<h3>Constraints</h3>
-<p>A layout can be seen as a set of horizontal and vertical constraints.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/constraints-of-a-layout' -%}
-  <small>Constraints of a layout</small>
-</div>
-<p>If you are using a gird, a boundary can be that there is an area of 4 columns and an area of 8 columns. A more of a web-based approach is to set a max-width on each area. This will result in a more fluid layout.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/more-fluid-layout' -%}
-  <small>A more fluid layout. The components should behave the same as the text in this example.</small>
-</div>
-
-<h3>Distance between elements</h3>
-<p>After setting the constraints, there is the
-  <strong>distance</strong>
-  between each element in the layout. This can be set with
-  <code>grid-gap</code>
-  if you use CSS-Grid or with
-  <code>margins</code>.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/distance-between-elements' -%}
-  <small>The distance between elements.</small>
-</div>
+<h3>Spacing</h3>
+<p>Spacing is the space between each element in the layout. They make clear what content belongs together and whatnot. They also create white-space and calmness into your design.</p>
 
 <h3>Flow</h3>
-<p>Then there is the flow in the layout. When using flexbox you can decide to align all your items left, center or right.
-</p>
-<div class="article__main-item">
-  {%- component 'layout-article/flow-in-layout' -%}
-  <small>The flow in the layout.</small>
-</div>
-<p>
-  These three factors; constraints, distance and flow produce
-  <strong>the layout</strong>.
-</p>
+<p>Flow controls how elements wrap. This is only relevant in a fluent design where elements have the opportunity to wrap. Therefore the flow relies on the constraints of each element.</p>
 
-<h2>The technical implementations</h2>
-<p>There are two implementations to choose from when creating a layout. The
-  <strong>class based</strong>
-  approach or the
-  <strong>component based</strong>
-  approach. You don’t have to choose only one for your project. They can be used side by side. The idea is to pick the right solution for each individual layout problem that you are having.
-</p>
+<h3>The difference between layout and a grid</h3>
+<p>A grid is always a layout but a layout isn’t always a grid. This is important to understand the solution in the next chapter. A grid always contains the three elements of layout (constrains, spacing and flow). But when a layout doesn’t contain any flow, it’s not a grid and you can create the layout differently.</p>
 
-<h3>The Class based approach</h3>
-<p>
-  Do you know Twitter Bootstrap? Bootstrap contains a grid system that is often used by developers. Its grid works with setting a
-  <code>container</code>
-  class to an element. By doing that, the element received a horizontal constraint. The child elements of this container are given
-  <code>row</code>
-  classes. This will give those elements a spacing (with
-  <code>margin</code>). Then there are
-  <code>col-...</code>
-  classes used to set each element into columns.
-</p>
+<h2>How to manage your layout</h2>
+<p>There are two ways I manage my layouts. Both implementations are very different but can be used in the same project. They are both used in different scenarios.</p>
 
-<p>
-  This approach also uses utility classes like Bootstrap does, but doesn't think in columns and rows. It focuses more on being a fluid layout with a vertical rhythm. Here's how to implement it.
-</p>
+<h3>Make all values reusable</h3>
+<p>If you want to start with your layout, you should first set all the different values that you need as variables. Theses values will probably match the three elements of the layout. This is how I do it.</p>
 
-<h4>Setting the constraints</h4>
-<p>
-  Constrains determine the horizontal maximum with of an element. A constraint can be set by using the
-  <code>constraint</code>
-  class. If there are multiple constrains needed you can use a notation like BEM and create
-  <code>constraint--s</code>,
-  <code>constraint--m</code>,
-  <code>constraint--l</code>
+<h3>Constrains</h3>
+<p>I want to have different constraints for different types of elements. One for large elements like articles, carousels, etc. One for elements like text, images and one for small elements like cards. I use t-shirt size values like s, xl, m, etc for this because it’s easy to add them and clear when you have too many of them.</p>
+
+<code>
+  :root { —constrain-l: 50rem; —constrain-m: 27rem; —constrain-s: 10rem; }
+</code>
+
+<p>Next to these t-shirt size values I also set a value for the text constrain that takes a t-shirt size constrain as its value.</p>
+
+<code>
+  :root { —max-text: var(—constrain-m); }
+</code>
+
+<h3>Spacings</h3>
+<p>The same system is used to create the spacings, only I start with more than three values. Often there is a certain scale in for these values (like you would have with typography). It's important to discuss these values with your design team before setting them. Because changing them after a while will affect a lot of the designs.</p>
+
+<code>
+  :root { —spacing-xl: 12.5rem; —spacing-xl: 9rem; —spacing-l: 5.5rem; —spacing-m: 2.3rem; —spacing-s: 1.125rem; —spacing-xs: .3rem; —spacing-xxs: .1rem; }
+</code>
+
+<p>These values rule your design. Therefore, I only use one of these values to declare the spacing between elements. Only if the design team has a very good explanation for them I will create a different value as exception.</p>
+
+<h3>Flow</h3>
+<p>The flow is something I don’t set in variables as that’s already done by CSS itself. There is no need to create a class for justifying items.</p>
+
+<h2>Manage your layout by CSS classes</h2>
+<p>For a simple layout (like blocks stacked on each other) I use CSS classes to control it. You can see them as utility classes. To control the spacing, I create three variables that reflect the correct spacing. Each value is assigned to the correct class that indicates the type of element. The names are
+  <code>.page-element</code>,
+  <code>.section-element</code>
   and
-  <code>constraint--xl</code>. The CSS defines a
-  <code>max-width</code>
-  and maybe sets the horizontal
-  <code>margins</code>
-  to
-  <code>auto</code>
-  but that differs to each design.
-</p>
-
-<h4>Setting the distance</h4>
-<p>
-  To create a nice vertical rhythm you need to evenly space the elements on the page. Because components can be reused everywhere, they should not contain any margins that influence the layout. Otherwise the rhythm is disturbed. These matings are called "Unwanted margins".
-</p>
-<p>You can see the vertical rhythm as building blocks with different vertical spaces. By creating classes like
-  <code>.page-item</code>,
-  <code>.section-item</code>
+  <code>.text-element</code>. For the constrains I do the same.
+  <code>.page-constrain</code>,
+  <code>.section-constrain</code>
   and
-  <code>.text-item</code>
-  there are only three spacings possible. Theses classes will contain CSS that sets the vertical margin to different sizes.
-</p>
+  <code>.text-constrain</code>.</p>
 
-<p>
-  The
-  <code>page-item</code>
-  is used to create a vertical distance between each big section on the page.
-</p>
+<h3>The advantages</h3>
+<p>By setting the spaces and constrains with classes, you only have to update one value to affect the layout of the entire website. Because they are set as CSS classes, you can manage the layout entirely from your HTML. No need for components to have any constrains. You can wrap anything in a `div` that contains a layout class and the component will fit nicely into the layout.</p>
+<p>A small example of a template that handles the layout with CSS classes.</p>
 
-<p>
-  The
-  <code>content item</code>
-  is used to create a vertical distance between each item within such a big section.
-</p>
+<code>
+  <main class="“page-constrain”">
+    <section class”page-element”="class”page-element”">
+      <h1>Main title</h1>
+      <p>Some nice text</p>
+    </section>
 
-<p>
-  The
-  <code>text-item</code>
-  is used create a vertical distance between each text. Think of an article with multiple paragraphs.
-</p>
+    <section class”page-element”="class”page-element”">
+      <h2>Section title</h2>
+      <p>Some nice text</p>
 
-<p>Depending on your design you should also add horizontal margins in here. The same philosophy will apply.</p>
+      <div class”section-constrain="class”section-constrain" section-element”="section-element”">
+        // Some component
+      </div>
+      <div class”section-constrain="class”section-constrain" section-element”="section-element”">
+        // Some component
+      </div>
+      <div class”section-constrain="class”section-constrain" section-element”="section-element”">
+        // Some component
+      </div>
+    </section>
+  </main>
+</code>
 
-<h4>Creating the flow</h4>
-<p>
-  If the stack of blocks are not all the same size, you want to align them in a certain way (left, center, right). This is done with the flow. Just likt the above two implementations you can create a class for this. Think of
-  <code>left</code>
-  <code>center</code>
-  <code>right</code>. The CSS of each class will contain a
-  <code>flexbox</code>
-  solution.
-</p>
+<p>This way you have a nice separation between the components and the layout. Where the components don't have to concern where they are placed on the page. They just have to stretch to the outsides of the box.</p>
 
-<p>
-  The upside to this solutions is that just by adding some classes, the layout is created. But that's also the downside. You give a lot of people the possibility to create or change the layout, just by adding/removing some classes. The same arguments apply for all utility class based systems.
-</p>
+<h3>The disadvantage</h3>
+<p>If a layout needs some more configuration or contains the flow aspect, there are better-suited solutions. That's because it's error-prone to add configuration (CCS class or data-element) to each direct child in the layout. It's easy to forget one direct child and break your layout.</p>
 
-<h3>Component based approach</h3>
-<p>A more rigged system would be to pour your components into another component that handles the layout. A nice example is the following layout.</p>
-<div class="article__main-item">
-  {%- component 'layout-article/more-complex-layout' -%}
-  <small>A more complex layout.</small>
-</div>
-<p>This is a more [dynamic] layout that's reused on multiple places and contains all sorts of different components.</p>
+<h2>Manege your layout with components</h2>
+<p>If a layout needs a lot of configuration, managing it by components it the way to go. Also if your layout contains Flow (grids), I use components to control the layout. Just a personal preference, because it's clear in your design system you are talking about a grid, not just the basic layout.</p>
 
-<h4>Creating the boundary, distance and flow</h4>
-<p>
-  By using CSS-grid or flexbox you can solve all the problems in one go! The
-  <code>max-width</code>
-  of
-  <code>grid-template-columns</code>
-  can be used to declare the boundary of the areas. You can use
-  <code>grid-gap</code>
-  or
-  <code>margin</code>
-  to set the distance between the components and
-  <code>justify-content</code>
-  or
-  <code>align-items</code>
-  to control the flow.
-</p>
+<p>If there are not too many of these components, I usually call them grid-alpha, grid-beta, etc. If there are too many it’s a good idea to align the naming of the grids with the design team for consistency.</p>
 
-<p>
-  I call these components
-  <strong>grids</strong>
-  and you can have multiple versions of these grids. These layout-components can be used to layout a page, section or component.
-</p>
+<h3>The implementation</h3>
+<p>A layout component will receive multiple items that need to be rendered inside the grid. They are called grid items. The grid will perform a simple loop and render each component.</p>
 
-<p>The component based approach is best suited if you have a layout that's reused multiple times. Because you have a bit more control over the flow part in this approach, it's also a good choice if the flow part of the layout is really important.</p>
+{%%}
+
+<p>You can use the same variables that are already set for the spacings between each grid item.</p>
+
+<h3>The advantages</h3>
+<p>The big advantage of using a component instead of classes is the way you can control the exceptions or setting. For instance, you have a very basic grid layout, but the size of the gutters can differ. This could be set by a property of the component. A lot of the times, there are multiple exceptions. Therefore you don’t want to add a class for each exception.</p>
+<p>Because grids have control over each element in the grid, it’s able to manage the flow of the grid items. This is not possible with the CSS classes approach because that’s not in control over all the items within it.</p>
+<p>The way that grids have the same code interface is also a benefit. Each grid will loop. Therefore it’s very easy to swap grids, without changing anything else. Just change the name grid-alpha to grid-beta and another interface will appear.</p>
 
 <h2>Conclusion</h2>
-<p>
-  A design system is a collection of components. Each component is agnostic to the place they are used. Therefor you need a layout system to show them correctly.
-</p>
-<p>Creating a layout has three aspects</p>
-<ol>
-  <li>Constrains, in width and sometimes height</li>
-  <li>Distance between the elements</li>
-  <li>The flow</li>
-</ol>
-
-<p>These problems can be solved with two approaches, the class based approach and the component based approach. Both approaches can be used in the same application and you should choose you solution based on the design.</p>
-<p>The class based approach can be very nice for a vertical block based layout. But if the flow part needs more control or if the layout is reused multiple times, the component based solution is a better choice.</p>
-<p>Special thanks to Peeke and Syb for their review and comments.</p>
-</div>
+<p>It’s only when you start making changes that you discovered that your layout isn’t managed properly. Instead of applying a fix on a single place, you have to update multiple files. This is where you could have managed your layout in a better manner.</p>
+<p>These are two good approaches that can be used beside each other. Managing your layout with CSS classes and with components. CSS classes should be used for layouts without any flow. The different CSS classes manage the distance between the elements (spacing) and the maximum size (constrains). These classes can be used anywhere you want.</p>
+<p>If there is a flow aspect to the layout, it’s a better idea to use a component. A component can also receive settings and is very easy to swap with another grid because the code interface is the same.</p>
