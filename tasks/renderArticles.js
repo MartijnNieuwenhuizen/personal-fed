@@ -39,7 +39,12 @@ export const renderArticles = () => {
     return src(articlesConfig.templateSrc)
       .pipe(
         data({
-          body: result
+          body: result,
+          header: {
+            nav: {
+              articlesActive: true
+            }
+          }
         })
       )
       .pipe(render(renderConfig))
