@@ -7,10 +7,15 @@ import data from 'gulp-data'
 import MarkdownParser from 'markdown-it'
 import rename from 'gulp-rename'
 
-import { articles as articlesConfig } from '../config'
+import { articles as articlesConfig, html as htmlConfig } from '../config'
 
 const renderConfig = {
-  path: articlesConfig.templateSrc,
+  path: [
+    articlesConfig.templateSrc,
+    htmlConfig.src.templatesDir,
+    htmlConfig.src.layoutDir,
+    htmlConfig.src.componentsDir
+  ],
   manageEnv: envManager
 }
 
