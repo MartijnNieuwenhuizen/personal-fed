@@ -21,6 +21,7 @@ import { renderArticles } from './tasks/renderArticles'
 function dev(cb) {
   return series(
     clean,
+    renderArticles,
     parallel(docs, html, img, css, fonts),
     parallel(
       js,
@@ -40,7 +41,12 @@ function articles(cb) {
 }
 
 function dist(cb) {
-  return series(clean, parallel(docs, html, img, css, fonts, js), zip)(cb)
+  return series(
+    clean,
+    renderArticles,
+    parallel(docs, html, img, css, fonts, js),
+    zip
+  )(cb)
 }
 
 function codequality(cb) {

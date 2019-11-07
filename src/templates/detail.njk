@@ -3,9 +3,14 @@
 {% block body %}
   {%- component 'header', header -%}
 
-  <main>HELLOOOOOOOOO</main>
-
-  {{ body | safe }}
+  <main class="content-item">
+    <article class="article">
+      <div class="article__aside"></div>
+      <div class="article__main">
+        {{ body | safe }}
+      </div>
+    </article>
+  </main>
 
   <div class="content-item">
     {%- component 'footer' -%}
