@@ -42,75 +42,17 @@
   --vw-min: 320;
   --vw-max: 1300;
 
-  // // Minimum Typographic scale
-  // --typographic-scale-min: 1.5;
-  // --heading-6-min: calc(var(--font-size-base));
-  // --heading-5-min: calc(var(--heading-6-min) * var(--typographic-scale-min));
-  // --heading-4-min: calc(var(--heading-5-min) * var(--typographic-scale-min));
-  // --heading-3-min: calc(var(--heading-4-min) * var(--typographic-scale-min));
-  // --heading-2-min: calc(var(--heading-3-min) * var(--typographic-scale-min));
-  // --heading-1-min: calc(var(--heading-2-min) * var(--typographic-scale-min));
-
-  // // Maximum Typographic scale
-  // --typographic-scale-max: 1.6;
-  // --heading-6-max: calc(var(--font-size-base));
-  // --heading-5-max: calc(var(--heading-6-max) * var(--typographic-scale-max));
-  // --heading-4-max: calc(var(--heading-5-max) * var(--typographic-scale-max));
-  // --heading-3-max: calc(var(--heading-4-max) * var(--typographic-scale-max));
-  // --heading-2-max: calc(var(--heading-3-max) * var(--typographic-scale-max));
-  // --heading-1-max: calc(var(--heading-2-max) * var(--typographic-scale-max));
-
   // Minimum Typographic scale
-  --heading-6-min: 16;
-  --heading-5-min: 22;
-  --heading-4-min: 31;
-  --heading-3-min: 45;
-  --heading-2-min: 63;
-  --heading-1-min: 90;
+  --heading-6: 16px;
+  --heading-5: 22px;
+  --heading-4: 31px;
+  --heading-3: 45px;
+  --heading-2: 63px;
+  --heading-1: 90px;
+  --heading-0: 8vmin;
 
-  // Maximum Typographic scale
-  --heading-6-max: 16;
-  --heading-5-max: 24;
-  --heading-4-max: 36;
-  --heading-3-max: 54;
-  --heading-2-max: 81;
-  --heading-1-max: 121;
-
-  // Fluid typography
-  --heading-1: calc(
-    calc(var(--heading-1-min) * 1px) +
-      (var(--heading-1-max) - var(--heading-1-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-  --heading-2: calc(
-    calc(var(--heading-2-min) * 1px) +
-      (var(--heading-2-max) - var(--heading-2-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-  --heading-3: calc(
-    calc(var(--heading-3-min) * 1px) +
-      (var(--heading-3-max) - var(--heading-3-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-  --heading-4: calc(
-    calc(var(--heading-4-min) * 1px) +
-      (var(--heading-4-max) - var(--heading-4-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-  --heading-5: calc(
-    calc(var(--heading-5-min) * 1px) +
-      (var(--heading-5-max) - var(--heading-5-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-  --heading-6: calc(
-    calc(var(--heading-6-min) * 1px) +
-      (var(--heading-6-max) - var(--heading-6-min)) *
-      ((100vw - calc(var(--vw-min) * 1px)) / (var(--vw-max) - var(--vw-min)))
-  );
-}
-
-@media (min-width: 1300px) {
-  :root {
+  @media (min-width: 950px) {
+    // Maximum Typographic scale
     --heading-6: 16px;
     --heading-5: 24px;
     --heading-4: 36px;
@@ -131,9 +73,9 @@ h6 {
   font-family: var(--font-family-serif);
 }
 
-// .super-h1 {
-//   font-size: 8vmin;
-// }
+.super-h1 {
+  font-size: var(--heading-0);
+}
 
 h1 {
   font-size: var(--heading-1);
@@ -154,15 +96,9 @@ h6 {
   font-size: var(--heading-6);
 }
 p {
-  /*   font-size: var(--font-size-base);  */
+  font-size: var(--font-size-base);
   line-height: var(--scale);
   max-width: var(--constrain-l);
   text-align: justify;
   margin: 0 auto;
-
-  /*
-    font-size: calc(var(--min-font-size) + (var(--max-font-size) - var(--min-font-size)) * ((100vw - var(--min-viewport-width)) / (var(--max-viewport-width) - var(--min-viewport-width)))); */
-
-  /*   font-size: calc((16px + 4px) * ((100vw - 320px) / (1280px - 320xp))); */
-  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1200 - 300)));
 }
