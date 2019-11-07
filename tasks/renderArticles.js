@@ -9,6 +9,8 @@ import rename from 'gulp-rename'
 
 import { articles as articlesConfig, html as htmlConfig } from '../config'
 
+const md = new MarkdownParser()
+
 const renderConfig = {
   path: [
     articlesConfig.templateSrc,
@@ -19,16 +21,18 @@ const renderConfig = {
   manageEnv: envManager
 }
 
-const getArticlesFromConfigFile = filePath => {
-  try {
-    return JSON.parse(fs.readFileSync(filePath)).articles
-  } catch {
-    return {}
-  }
-}
+/**
+ * Check if the filename start with a dot
+ * @param {String} fileName
+ * @returns {Boolean}
+ */
+const isNotDotFile = fileName => fileName.charAt(0) !== '.'
+
+const getArticleNamesFromFileSystem = filePath =>
+  fs.readdirSync(filePath, 'utf-8').filter(isNotDotFile)
 
 export const renderArticles = () => {
-  const articles = getArticlesFromConfigFile(articlesConfig.config)
+  const fileNames = getArticleNamesFromFileSystem(articlesConfig.src)
 
   const articleGulpStream = fileNames.map(fileName => {
     const filePath = `./src/articles/${fileName}`

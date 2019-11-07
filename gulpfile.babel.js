@@ -15,7 +15,6 @@ import { js, jsLint, jsTest } from './tasks/js'
 import { fileUpload } from './tasks/upload'
 import { githooks } from './tasks/githooks'
 import { zip } from './tasks/zip'
-import { markdown } from './tasks/markdown'
 import { renderArticles } from './tasks/renderArticles'
 
 function dev(cb) {
@@ -36,7 +35,6 @@ function dev(cb) {
 }
 
 function articles(cb) {
-  // return series(markdown, renderArticles)(cb)
   return series(renderArticles)(cb)
 }
 
