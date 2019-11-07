@@ -8,8 +8,9 @@
   }
 
   &__title {
-    @include header-xxl;
     margin: 0;
+
+    font-size: var(--heading-3);
     letter-spacing: var(--letter-spacing-m);
 
     &:before {

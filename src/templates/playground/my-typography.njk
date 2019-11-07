@@ -1,0 +1,11 @@
+{% extends './default.njk' %}
+
+{% block body %}
+  {%- component 'header', header -%}
+
+  {%- component 'playground/my-typography' -%}
+
+  <div class="content-item">
+    {%- component 'footer' -%}
+  </div>
+{% endblock %}
