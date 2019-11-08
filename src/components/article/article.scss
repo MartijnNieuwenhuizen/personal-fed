@@ -96,7 +96,34 @@
   h4,
   h5,
   h6 {
+    position: relative;
     margin-top: var(--spacing-xxxxl);
+
+    &:before {
+      position: absolute;
+      transform: translateX(-100%);
+      display: inline-block;
+
+      color: var(--color-gray);
+      font-size: var(--body-m);
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  h2:before {
+    content: '##';
+  }
+  h3:before {
+    content: '###';
+  }
+  h4:before {
+    content: '####';
+  }
+  h5:before {
+    content: '#####';
+  }
+  h6:before {
+    content: '######';
   }
 
   p,

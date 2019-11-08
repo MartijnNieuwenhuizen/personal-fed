@@ -38,26 +38,29 @@
   --font-family-serif: 'Crimson-Text', serif;
   --font-family-sans-serif: 'Lato', 'Helvetica', 'Arial', sans-serif;
 
-  --font-size-base: 18;
+  --font-size-base: 18px;
   --vw-min: 320;
   --vw-max: 1300;
 
+  --body-xs: 12px;
+  --body-s: 16px;
+  --body-m: var(--font-size-base);
+
   // Minimum Typographic scale
-  --heading-6: 16px;
-  --heading-5: 22px;
-  --heading-4: 31px;
-  --heading-3: 45px;
-  --heading-2: 63px;
+  --heading-6: var(--font-size-base);
+  --heading-5: var(--font-size-base);
+  --heading-4: 22px;
+  --heading-3: 31px;
+  --heading-2: 45px;
   --heading-1: 90px;
-  --heading-0: 8vmin;
 
   @media (min-width: 950px) {
     // Maximum Typographic scale
-    --heading-6: 16px;
-    --heading-5: 24px;
-    --heading-4: 36px;
-    --heading-3: 54px;
-    --heading-2: 81px;
+    --heading-6: var(--font-size-base);
+    --heading-5: var(--font-size-base);
+    --heading-4: 24px;
+    --heading-3: 36px;
+    --heading-2: 54px;
     --heading-1: 121px;
   }
 }
