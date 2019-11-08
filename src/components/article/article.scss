@@ -21,9 +21,12 @@
       }
     }
     @include breakpoint($breakpoint-l) {
+      > p:first-of-type {
+        transform: translateX(calc((80vw - var(--article-constraint)) / 2));
+      }
       > h1:first-of-type {
         transform: translateX(
-          calc(((90vw - var(--article-constraint)) / 2) * -1)
+          calc(((80vw - var(--article-constraint)) / 2) * -1)
         );
       }
     }
