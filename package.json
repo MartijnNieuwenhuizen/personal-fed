@@ -63,7 +63,9 @@
     "ignore": "^5.1.4",
     "js-beautify": "^1.10.2",
     "js-yaml": "^3.13.1",
+    "markdown-it": "^10.0.0",
     "marked": "^0.7.0",
+    "merge-stream": "^2.0.0",
     "moment-timezone": "^0.5.26",
     "nunjucks-includeData": "0.0.9",
     "prettier": "1.18.2",
@@ -82,10 +84,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.0",
     "eligrey-classlist-js-polyfill": "^1.2.20180112",
-    "markdown-it": "^10.0.0",
-    "merge-stream": "^2.0.0",
     "normalize-scss": "^7.0.1",
-    "nunjucks": "^3.2.0",
     "stylelint-declaration-use-variable": "^1.7.0"
   }
 }
