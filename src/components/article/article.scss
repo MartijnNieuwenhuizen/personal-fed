@@ -1,3 +1,7 @@
+:root {
+  --article-constraint: 35rem; // Move this to layout CSS file
+}
+
 .article {
   position: relative;
 
@@ -10,7 +14,17 @@
 
     @include breakpoint($breakpoint-m) {
       > p:first-of-type {
-        transform: translateX(10vw);
+        transform: translateX(6vw);
+      }
+      > h1:first-of-type {
+        transform: translateX(-6vw);
+      }
+    }
+    @include breakpoint($breakpoint-l) {
+      > h1:first-of-type {
+        transform: translateX(
+          calc(((90vw - var(--article-constraint)) / 2) * -1)
+        );
       }
     }
   }
@@ -52,7 +66,7 @@
   ol,
   ul,
   .article__main-item {
-    max-width: 35rem;
+    max-width: var(--article-constraint);
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
