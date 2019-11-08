@@ -12,6 +12,10 @@
       move-from-below var(--pace-normal) var(--delay-long) var(--ease-in-out)
         both;
 
+    > h1:first-of-type {
+      font-size: 9vmax;
+    }
+
     @include breakpoint($breakpoint-m) {
       > p:first-of-type {
         transform: translateX(6vw);
