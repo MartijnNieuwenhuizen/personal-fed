@@ -113,7 +113,7 @@ module.exports = {
   },
 
   articles: {
-    config: `${base.src}/data/articles.json`,
+    src: `${base.src}/articles`,
     templateSrc: `${base.src}/templates/detail.njk`,
     dist: `${base.dist}/articles`
   },
