@@ -1,0 +1,9 @@
+{
+  "defaultEasings": [
+    {
+      "id": "1",
+      "title": "Ease in",
+      "class": "foo-bar"
+    }
+  ]
+}

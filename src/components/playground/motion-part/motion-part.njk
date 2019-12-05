@@ -1,0 +1,9 @@
+<section class="motion-part" data-module="playground/motion-part/MotionPart" data-loop-trigger='[data-loop-trigger="{{ id }}"]' data-run-trigger='[data-run-trigger="{{ id }}"]' data-target='[data-target="{{ id }}"]'>
+  <div class="motion-part__controls">
+    <label for="loop1">Loop</label>
+    <input data-loop-trigger="{{ id }}" id="loop1" type="checkbox">
+
+    <button data-run-trigger="{{ id }}" type="button">Animate</button>
+  </div>
+  <div class="motion-part__block" data-target="{{ id }}" data-ease="in">{{ title }}</div>
+</section>

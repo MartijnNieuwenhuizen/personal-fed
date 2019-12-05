@@ -3,10 +3,9 @@
 
   <section class="page-item motion-at-transavia__section">
     <h2 class="motion-at-transavia__sub-title">Default easings</h2>
-
-    <div class="motion-at-transavia__motion-block" data-ease="in">Ease in</div>
-    <div class="motion-at-transavia__motion-block" data-ease="out">Ease out</div>
-    <div class="motion-at-transavia__motion-block" data-ease="in-out">Ease in out</div>
+    {% for easing in defaultEasings %}
+      {%- component 'playground/motion-part', easing -%}
+    {% endfor %}
   </section>
 
   <section class="page-item motion-at-transavia__section">

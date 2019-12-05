@@ -1,0 +1,45 @@
+.motion-part {
+  &__block {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    // animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+
+    &[data-ease='in'] {
+      animation-timing-function: var(--ease-in);
+    }
+    &[data-ease='out'] {
+      animation-timing-function: var(--ease-out);
+    }
+    &[data-ease='in-out'] {
+      animation-timing-function: var(--ease-in-out);
+    }
+    &[data-ease='bounce-in'] {
+      animation-timing-function: var(--bounce-in);
+    }
+    &[data-ease='bounce-out'] {
+      animation-timing-function: var(--bounce-out);
+    }
+    &[data-ease='bounce-in-out'] {
+      animation-timing-function: var(--bounce-in-out);
+    }
+
+    &[data-overflow='true'] {
+      animation-name: move-with-overflow;
+    }
+
+    &--animate {
+      animation-name: move;
+    }
+  }
+}
