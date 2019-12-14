@@ -1,0 +1,51 @@
+<div class="page-item constrain--s">
+  <h2>Print layout with web techniques</h2>
+  <p>There are multiple ways of achiving the correct result</p>
+</div>
+<div class="page-item"></div>
+<div class="page-item constrain--s">
+  <h3>One</h3>
+  <p>use :after for the word cut off and transform to pull the letters up</p>
+</div>
+<div class="print-layout-1 solution-1">
+  <div class="print-layout-1__word print-layout-1__word-1 print-layout-1__word--with-mask">Fiat</div>
+  <div class="print-layout-1__word print-layout-1__word-2 print-layout-1__word--with-mask">Fiat</div>
+  <h1 class="print-layout-1__word print-layout-1__word-3 print-layout-1__word--total">Fiat</h1>
+</div>
+
+<div class="page-item constrain--s">
+  <h3>Two</h3>
+  <p>Use position absolute</p>
+</div>
+<div class="print-layout-1 solution-2">
+  <div class="print-layout-1__word print-layout-1__word-1 print-layout-1__word--with-mask">Fiat</div>
+  <div class="print-layout-1__word print-layout-1__word-2 print-layout-1__word--with-mask">Fiat</div>
+  <h1 class="print-layout-1__word print-layout-1__word-3 print-layout-1__word--total">Fiat</h1>
+</div>
+
+<div class="page-item constrain--s">
+  <h3>Three</h3>
+  <p>Use CSS-Grid</p>
+</div>
+<div class="print-layout-1 solution-3">
+  <span class="print-layout-1__word-1">F</span>
+  <span class="print-layout-1__word-1">i</span>
+  <span class="print-layout-1__word-1">a</span>
+  <span class="print-layout-1__word-1">t</span>
+  <span class="print-layout-1__word-2">F</span>
+  <span class="print-layout-1__word-2">i</span>
+  <span class="print-layout-1__word-2">a</span>
+  <span class="print-layout-1__word-2">t</span>
+  <span class="print-layout-1__word-3">F</span>
+  <span class="print-layout-1__word-3">i</span>
+  <span class="print-layout-1__word-3">a</span>
+  <span class="print-layout-1__word-3">t</span>
+</div>
+
+<div class="page-item constrain--s">
+  <h3>Five</h3>
+  <p>Box-Shadow</p>
+</div>
+<div class="print-layout-1 solution-5">
+  <h1 class="print-layout-1__word">Fiat</h1>
+</div>

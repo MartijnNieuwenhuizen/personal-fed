@@ -1,0 +1,103 @@
+.print-layout-1 {
+  // Relevant for each solution
+  &__word {
+    margin: 0 auto;
+    text-align: center;
+
+    font-size: 40vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+    font-weight: bolder;
+    letter-spacing: -4vmin;
+  }
+
+  &__word-1 {
+    color: #e82643;
+  }
+  &__word-2 {
+    color: #0467b2;
+  }
+  &__word-3 {
+    color: #383838;
+  }
+
+  .print-layout-1__word--with-mask {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 21vmin;
+      left: 0vmin;
+      right: -10vmin;
+      height: 21vmin;
+      background-color: white;
+    }
+  }
+}
+
+// First solution
+.print-layout-1.solution-1 {
+  .print-layout-1__word--with-mask {
+    &:nth-of-type(2) {
+      transform: translateY(-34vmin);
+    }
+  }
+
+  .print-layout-1__word--total {
+    transform: translateY(-68vmin);
+  }
+}
+
+// Second solution
+.print-layout-1.solution-2 {
+  position: relative;
+  min-height: 70vmin;
+
+  .print-layout-1__word {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .print-layout-1__word-2 {
+    top: 12.5vmin;
+  }
+  .print-layout-1__word-3 {
+    top: 25vmin;
+  }
+}
+
+// Third solution
+.print-layout-1.solution-3 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, 12vh) auto;
+
+  font-size: 40vmin;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  letter-spacing: -2.5vmin;
+  line-height: 0.7;
+
+  .print-layout-1__word-1 {
+    overflow-y: hidden;
+  }
+  .print-layout-1__word-2 {
+    overflow-y: hidden;
+  }
+  .print-layout-1__word-3 {
+  }
+}
+
+.print-layout-1.solution-5 {
+  margin: 10vh 0 0;
+
+  .print-layout-1__word {
+    color: #383838;
+
+    text-shadow: 0 -12vmin #0467b2, 0 -24vmin #e82643;
+  }
+}
