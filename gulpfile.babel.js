@@ -15,12 +15,12 @@ import { js, jsLint, jsTest } from './tasks/js'
 import { fileUpload } from './tasks/upload'
 import { githooks } from './tasks/githooks'
 import { zip } from './tasks/zip'
-import { markdown } from './tasks/markdown'
 import { renderArticles } from './tasks/renderArticles'
 
 function dev(cb) {
   return series(
     clean,
+    renderArticles,
     parallel(docs, html, img, css, fonts),
     parallel(
       js,
@@ -35,12 +35,16 @@ function dev(cb) {
 }
 
 function articles(cb) {
-  // return series(markdown, renderArticles)(cb)
   return series(renderArticles)(cb)
 }
 
 function dist(cb) {
-  return series(clean, parallel(docs, html, img, css, fonts, js), zip)(cb)
+  return series(
+    clean,
+    renderArticles,
+    parallel(docs, html, img, css, fonts, js),
+    zip
+  )(cb)
 }
 
 function codequality(cb) {
