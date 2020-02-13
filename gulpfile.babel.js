@@ -16,11 +16,12 @@ import { fileUpload } from './tasks/upload'
 import { githooks } from './tasks/githooks'
 import { zip } from './tasks/zip'
 import { renderArticles } from './tasks/renderArticles'
+import { renderBlogs } from './tasks/renderBlogs'
 
 function dev(cb) {
   return series(
     clean,
-    renderArticles,
+    parallel(renderArticles, renderBlogs),
     parallel(docs, html, img, css, fonts),
     parallel(
       js,
@@ -35,13 +36,13 @@ function dev(cb) {
 }
 
 function articles(cb) {
-  return series(renderArticles)(cb)
+  return series(parallel(renderArticles, renderBlogs))(cb)
 }
 
 function dist(cb) {
   return series(
     clean,
-    renderArticles,
+    parallel(renderArticles, renderBlogs),
     parallel(docs, html, img, css, fonts, js),
     zip
   )(cb)

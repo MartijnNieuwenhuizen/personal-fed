@@ -117,6 +117,11 @@ module.exports = {
     templateSrc: `${base.src}/templates/detail.njk`,
     dist: `${base.dist}/articles`
   },
+  blogs: {
+    src: `${base.src}/blogs`,
+    templateSrc: `${base.src}/templates/detail.njk`,
+    dist: `${base.dist}/blogs`
+  },
 
   img: {
     src: {
