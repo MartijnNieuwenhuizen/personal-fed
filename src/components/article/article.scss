@@ -19,6 +19,7 @@
     @include breakpoint($breakpoint-m) {
       > p:first-of-type {
         transform: translateX(6vw);
+        margin-bottom: var(--spacing-xxxxl);
       }
       > h1:first-of-type {
         transform: translateX(-6vw);
