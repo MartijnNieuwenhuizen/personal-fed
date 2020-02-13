@@ -68,7 +68,7 @@
     "merge-stream": "^2.0.0",
     "moment-timezone": "^0.5.26",
     "nunjucks-includeData": "0.0.9",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "require-globify": "^1.4.1",
     "stylelint": "^11.0.0",
     "stylelint-config-prettier": "^5.2.0",
