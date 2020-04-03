@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "href": "/playground/print-layout-2.html",
+      "title": "Print Layout 2 - text overlaying",
+      "date": "05-12-2019",
+      "readingTime": ""
+    },
+    {
       "href": "/playground/print-layout-1.html",
       "title": "Print Layout 1",
       "date": "05-12-2019",
