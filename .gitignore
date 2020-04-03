@@ -27,3 +27,6 @@ Thumbs.db
 
 # Other
 .env
+
+#Backstop
+backstop_data/
