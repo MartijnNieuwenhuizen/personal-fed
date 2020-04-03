@@ -2,6 +2,7 @@ package.json
 package-lock.json
 dist
 node_modules
+backstop_data
 **/vendor/**
 **/polyfill/**
 **/*.min.css
