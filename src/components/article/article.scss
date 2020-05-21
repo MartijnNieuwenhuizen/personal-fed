@@ -142,16 +142,21 @@
   }
 
   code {
-    display: block;
-    // width: 100%;
     display: inline-block;
     margin: 0;
     margin-left: calc(var(--spacing-s) * -1);
     margin-right: calc(var(--spacing-s) * -1);
 
-    // color: var(--color-secondary);
     background-color: var(--color-gray-lighter);
-    // border-radius: 5px;
     border: none;
+  }
+
+  a {
+    color: var(--color-primary);
+
+    &:hover,
+    &:focus {
+      color: var(--color-primary-darker);
+    }
   }
 }

@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "href": "/blogs/personal-coding-guidelines.html",
+      "title": "My personal coding guidelines",
+      "date": "21-05-2020",
+      "readingTime": "1"
+    },
+    {
+      "href": "/blogs/personal-development-mission.html",
+      "title": "My personal development mission",
+      "date": "21-05-2020",
+      "readingTime": "1"
+    },
+    {
       "href": "/blogs/lets-all-stop-creating-the-same-dull-things.html",
       "title": "Let's all stop creating the same dull things",
       "date": "13-02-2020",
