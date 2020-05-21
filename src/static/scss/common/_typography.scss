@@ -101,3 +101,12 @@ p {
   text-align: justify;
   margin: 0 auto;
 }
+
+article a {
+  color: var(--color-primary);
+
+  &:hover,
+  &:focus {
+    color: var(--color-primary-darker);
+  }
+}
