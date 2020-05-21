@@ -1,5 +1,9 @@
 $border-fat: 5px solid var(--color-black);
 
 @mixin fat-border {
+  border: $border-fat;
+}
+
+@mixin fat-border-bottom {
   border-bottom: $border-fat;
 }
