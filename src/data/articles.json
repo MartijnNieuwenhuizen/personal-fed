@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "href": "/articles/working-agile-from-a-design-team-perspective.html",
+      "title": "Working Agile, from a design team perspective",
+      "date": "25-05-2020",
+      "readingTime": "5"
+    },
+    {
       "href": "/articles/2-ways-of-managing-layout-in-a-design-system.html",
       "title": "2 ways of managing layout in a design system",
       "date": "07-11-2019",
