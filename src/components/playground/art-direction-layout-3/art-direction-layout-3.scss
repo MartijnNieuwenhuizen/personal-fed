@@ -1,0 +1,58 @@
+.art-direction-layout-3 {
+  &__wrapper {
+    padding: 0 1rem;
+  }
+
+  &__img-placeholder {
+    background-color: lightgray;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 3rem;
+  }
+
+  &__parag-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  &__left::before,
+  &__right::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    shape-outside: polygon(100% 35%, 0 35%, 0 65%, 100% 65%);
+  }
+  &__left::before {
+    float: right;
+  }
+  &__right::before {
+    float: left;
+  }
+
+  &__parag {
+    margin: 0;
+  }
+
+  &__aside {
+    position: absolute;
+    top: 35%;
+    width: 50%;
+    left: 25%;
+  }
+
+  &__quote {
+    @include fat-border;
+
+    margin: 0;
+    padding: 1.5rem;
+
+    border-color: var(--color-primary);
+    font-size: 3rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+}

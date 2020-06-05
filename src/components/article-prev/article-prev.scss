@@ -1,5 +1,5 @@
 .article-prev {
-  @include fat-border;
+  @include fat-border-bottom;
   position: relative;
   padding: var(--spacing-m);
 
