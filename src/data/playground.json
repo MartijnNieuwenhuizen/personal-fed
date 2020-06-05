@@ -1,9 +1,15 @@
 {
   "items": [
     {
+      "href": "/playground/art-direction-layout-3.html",
+      "title": "Art direction Layout 3 - Multiple layouts with same HTML",
+      "date": "05-06-2020",
+      "readingTime": ""
+    },
+    {
       "href": "/playground/art-direction-layout-2.html",
       "title": "Art direction Layout 2 - text overlaying",
-      "date": "05-12-2019",
+      "date": "03-04-2020",
       "readingTime": ""
     },
     {

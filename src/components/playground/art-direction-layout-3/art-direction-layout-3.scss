@@ -1,0 +1,72 @@
+.art-direction-layout-3 {
+  &__title {
+    grid-area: title;
+  }
+  &__quote {
+    grid-area: quote;
+    font-size: 3rem;
+    font-weight: bold;
+    &:before,
+    &:after {
+      content: '"';
+      font-family: var(--font-family-serif);
+      color: var(--approach-color);
+    }
+  }
+  &__figure {
+    grid-area: figure;
+    margin: 0;
+    padding: 0;
+  }
+  &__ingredients {
+    grid-area: ingredients;
+  }
+  &__process {
+    grid-area: process;
+  }
+
+  h3 {
+    margin: var(--spacing-xxl) 0 0;
+  }
+  img {
+    width: 100%;
+  }
+
+  .approach-1 {
+    --approach-color: lightpink;
+
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      '. title title title title title title .'
+      'figure figure figure figure . quote quote .'
+      '. ingredients ingredients .  process process process .';
+  }
+
+  .approach-2 {
+    --approach-color: lightpink;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-areas:
+      '. title title title.'
+      'figure figure quote quote quote'
+      '. ingredients ingredients process process';
+  }
+
+  .approach-3 {
+    --approach-color: lightpink;
+
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr 2fr 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+      '. title title title title . .'
+      '. ingredients ingredients ingredients process process .'
+      'figure figure figure figure process process .'
+      'figure figure figure figure process process .'
+      '. quote quote quote . . .';
+  }
+}
