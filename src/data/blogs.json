@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "href": "/blogs/manage-dependencies-for-a-function-inside-a-map.html",
+      "title": "Manage dependencies for a function inside a map",
+      "date": "08-06-2020",
+      "readingTime": "2"
+    },
+    {
       "href": "/blogs/personal-coding-guidelines.html",
       "title": "My personal coding guidelines",
       "date": "21-05-2020",
