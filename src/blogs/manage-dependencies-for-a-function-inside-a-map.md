@@ -37,7 +37,7 @@ A first approach would look something like this:
 
 But this doesn't look nice to me. Another way is to retrieve the state in the file itself, but that would make testing harder and make is less configurable. Next to that, getting the state on a lot of locations could potentially decrease the performance of your app.
 
-I also miss the option for configuration in both cases. Maybe you want to pass in the books a bit earlier or it makes more sense to do it in another location of your app. Luckily there is another way of doing this that is more functional oriented:
+I also miss the option for configuration in both cases. Maybe you want to pass in the books a bit earlier or it makes more sense to do it in another location of your app. Luckily there is another way of doing this that is more functional oriented. This makes use of a pattern called **Currying**, this way the function doesn't take all it's arguments up-front, but gradually receives them where it can.
 
 ```
   // Same format as above
