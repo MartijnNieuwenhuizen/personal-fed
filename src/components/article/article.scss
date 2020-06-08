@@ -134,7 +134,7 @@
   p,
   li {
     font-size: 1.2rem;
-    line-height: 2.1;
+    line-height: 1.9;
 
     @include breakpoint($breakpoint-m) {
       font-size: 1.4rem;
@@ -143,7 +143,7 @@
 
   code {
     display: inline-block;
-    margin: 0;
+    margin: 3rem;
     margin-left: calc(var(--spacing-s) * -1);
     margin-right: calc(var(--spacing-s) * -1);
 
