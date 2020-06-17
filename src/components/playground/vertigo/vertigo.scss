@@ -1,0 +1,23 @@
+@keyframes vertigo {
+  from {
+    background-size: 400%;
+    transform: scale(0.5);
+    transform-origin: 50% 75%;
+  }
+  to {
+    background-size: 100%;
+    transform: scale(1);
+    transform-origin: 50% 75%;
+  }
+}
+
+.vertigo {
+  width: 40vw;
+  height: 40vw;
+
+  animation: var(--pace-slow) var(--ease-in) vertigo forwards;
+
+  background-image: url('/static/img/playground/image-art-direction-layout-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
