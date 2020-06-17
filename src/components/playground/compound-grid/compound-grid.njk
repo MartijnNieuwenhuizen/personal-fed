@@ -1,0 +1,20 @@
+<article>
+  <h1>Compound Grid</h1>
+  <p>After reading multiple articles from
+    <a href="https://www.smashingmagazine.com/author/andy-clarke/">Andy Clarke</a>
+    I want to implement a compound grid myself</p>
+
+  <p>A compound grid are multiple grids overlayed over each other. This will ceate a more interesting and vibrant grid.</p>
+
+  <h2>First attempt</h2>
+  <p>The first attempt is a mix of a 3 and 4 column grid.</p>
+
+  <div class="compound-grid__3-4">
+    {% for item in items %}
+      <section class="compound-grid__item">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.label }}</p>
+      </section>
+    {% endfor %}
+  </div>
+</article>

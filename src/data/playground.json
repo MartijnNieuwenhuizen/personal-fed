@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "href": "/playground/compound-grid.html",
+      "title": "Compound grid",
+      "date": "15-06-2020",
+      "readingTime": ""
+    },
+    {
       "href": "/playground/art-direction-layout-3.html",
       "title": "Art direction Layout 3 - centered element between text columns",
       "date": "08-04-2020",
