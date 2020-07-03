@@ -41,7 +41,7 @@ If you want to start with your layout, you should first set all the different va
 
 I want to have different constraints for different types of elements. One for large elements like articles, carousels, etc. One for elements like text, images and one for small elements like cards. I use t-shirt size values like s, xl, m, etc for this because it’s easy to add them and clear when you have too many of them.
 
-```
+```CSS
 :root {
 	—constrain-l: 50rem;
 	—constrain-m: 27rem;
@@ -51,7 +51,7 @@ I want to have different constraints for different types of elements. One for la
 
 Next to these t-shirt size values I also set a value for the text constrain that takes a t-shirt size constrain as its value.
 
-```
+```CSS
 :root {
 	—max-text: var(—constrain-m);
 }
@@ -61,7 +61,7 @@ Next to these t-shirt size values I also set a value for the text constrain that
 
 The same system is used to create the spacings, only I start with more than three values. Often there is a certain scale in for these values (like you would have with typography). It's important to discuss these values with your design team before setting them. Because changing them after a while will affect a lot of the designs.
 
-```
+```CSS
 :root {
 	—spacing-xl: 12.5rem;
 	—spacing-xl: 9rem;
@@ -90,7 +90,7 @@ the layout.
 
 A small example of a template that handles the layout with CSS classes.
 
-```
+```HTML
 <main class=“page-constrain”>
 	<section class”page-element”>
 		<h1>Main title</h1>
@@ -130,7 +130,7 @@ If there are not too many of these components, I usually call them grid-alpha, g
 
 A layout component will receive multiple items that need to be rendered inside the grid. They are called grid items. The grid will perform a simple loop and render each component.
 
-```
+```HTML
 <div class=“grid-alpha”>
 	{for each grid item}
 		<div class=“grid-alpha__item”>

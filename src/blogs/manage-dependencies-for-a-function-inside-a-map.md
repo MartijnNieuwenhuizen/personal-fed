@@ -6,7 +6,7 @@ Take the following example. You have two entities in your store, people and book
 
 A first approach would look something like this:
 
-```
+```javascript
   const state = {
     people: [
       {
@@ -39,7 +39,7 @@ But this doesn't look nice to me. Another way is to retrieve the state in the fi
 
 I also miss the option for configuration in both cases. Maybe you want to pass in the books a bit earlier or it makes more sense to do it in another location of your app. Luckily there is another way of doing this that is more functional oriented. This makes use of a pattern called **Currying**, this way the function doesn't take all it's arguments up-front, but gradually receives them where it can.
 
-```
+```javascript
   // Same format as above
   const state = { ... }
 
@@ -54,10 +54,10 @@ I also miss the option for configuration in both cases. Maybe you want to pass i
 
 In that case, addBookTitlesToPerson.js would look something like this:
 
-```
+```javascript
 // addBookTitlesToPerson.js
 
-export default (books) => (person) => {
+export default books => person => {
   const bookTitlesRead = person.booksRead.map(bookId => books[bookId].title)
 
   return {

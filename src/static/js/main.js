@@ -1,4 +1,6 @@
 // Reference our components so they get included
+const Prism = require('prismjs')
+
 import { initializeComponents } from 'utils/initializeComponents'
 
 const ready = () => {
@@ -14,7 +16,19 @@ const ready = () => {
   )
 }
 
-ready().then(() => initializeComponents(document))
+ready().then(() => {
+  initializeComponents(document)
+  Prism.highlightAll()
+
+  // const codeElements = Array.from(document.querySelectorAll('code'))
+  // console.log('codeElements: ', codeElements)
+
+  // codeElements.forEach(codeElement => {
+  //   codeElement.className = ''
+  //   codeElement.classList.add('language-javascript')
+  //   Prism.highlightElement(codeElement)
+  // })
+})
 
 // // If you want to use conditioner instead:
 //
