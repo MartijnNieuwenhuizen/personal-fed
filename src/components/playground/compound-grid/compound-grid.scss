@@ -6,32 +6,32 @@
   &__item {
     background-color: var(--component-color);
 
-    &:nth-of-type(1) {
-      grid-column: 2 / span 4;
-      grid-row: span 2;
-    }
-    &:nth-of-type(2) {
-      grid-column: -1 / span 2;
-      grid-row: span 2;
-    }
-    &:nth-of-type(3) {
-      grid-row: span 2;
-    }
-    &:nth-of-type(4) {
-      grid-row: span 2;
-    }
-    &:nth-of-type(5) {
-      grid-row: span 2;
-    }
-    &:nth-of-type(6) {
-      grid-row: span 2;
-    }
-    &:nth-of-type(7) {
-      grid-row: span 2;
-    }
-    &:nth-of-type(8) {
-      grid-row: span 2;
-    }
+    // &:nth-of-type(1) {
+    //   grid-column: 2 / span 4;
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(2) {
+    //   grid-column: -1 / span 2;
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(3) {
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(4) {
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(5) {
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(6) {
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(7) {
+    //   grid-row: span 2;
+    // }
+    // &:nth-of-type(8) {
+    //   grid-row: span 2;
+    // }
   }
 
   &__3-4 {
