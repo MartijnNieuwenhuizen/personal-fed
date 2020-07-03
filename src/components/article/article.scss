@@ -92,6 +92,12 @@
     }
   }
 
+  pre {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+
   img {
     display: block;
   }
@@ -142,13 +148,16 @@
   }
 
   code {
+    width: 100%;
     display: inline-block;
-    margin: 3rem;
     margin-left: calc(var(--spacing-s) * -1);
     margin-right: calc(var(--spacing-s) * -1);
-
-    background-color: var(--color-gray-lighter);
     border: none;
+  }
+  code:not([class*='language-']) {
+    width: auto;
+    color: var(--color-secondary);
+    padding: 0 0.5rem;
   }
 
   a {

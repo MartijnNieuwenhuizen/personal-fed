@@ -88,6 +88,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.0",
     "eligrey-classlist-js-polyfill": "^1.2.20180112",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "prismjs": "^1.20.0"
   }
 }
