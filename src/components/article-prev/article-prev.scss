@@ -1,14 +1,23 @@
 .article-prev {
   @include fat-border-bottom;
   position: relative;
-  padding: var(--spacing-m);
+  padding: 0 var(--spacing-s) 0 0;
+
+  @supports (display: grid) {
+    display: grid;
+
+    @include breakpoint($breakpoint-m) {
+      grid-template-columns: auto 1fr;
+    }
+  }
 
   @include breakpoint($breakpoint-m) {
-    padding: var(--spacing-xxl) var(--spacing-m);
+    padding: 0;
   }
 
   &__title {
     margin: 0;
+    padding: var(--spacing-m);
 
     font-size: var(--heading-3);
     letter-spacing: var(--letter-spacing-m);
@@ -20,19 +29,13 @@
         transform: translate(0, var(--spacing-xxl)) scale(0.1);
       }
     }
+
+    @include breakpoint($breakpoint-m) {
+      padding: var(--spacing-xxl) var(--spacing-m);
+    }
   }
   &__intro {
     margin: 0;
-  }
-  &__pub-date {
-    display: block;
-    width: 100%;
-    text-align: right;
-  }
-  &__reading-time {
-    position: absolute;
-    top: 0;
-    right: var(--spacing-m);
   }
 
   &__link {
@@ -52,6 +55,20 @@
       &:before {
         transform: translate(-0.1rem, -0.3rem) scale(1.05) rotate(-2deg);
       }
+    }
+  }
+
+  &__meta {
+    display: inline-flex;
+    flex-direction: column;
+    padding: var(--spacing-s) 0 var(--spacing-s) var(--spacing-s);
+    border-left: 3px solid var(--color-primary);
+
+    @supports (display: grid) {
+      display: grid;
+      gap: var(--spacing-xs);
+      justify-self: end;
+      align-self: end;
     }
   }
 }
