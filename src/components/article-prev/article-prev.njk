@@ -2,8 +2,14 @@
   <a class="article-prev__link" href="{{ href }}"></a>
 
   <h2 class="article-prev__title">{{ title }}</h2>
-  {# <time class="article-prev__pub-date">{{ date }}</time> #}
-  {# <small class="article-prev__reading-time">{{ readingTime }}
-    min
-  </small> #}
+
+  <aside class="article-prev__meta">
+    {% if readingTime %}
+      <small class="article-prev__reading-time">{{ readingTime }}
+        min
+      </small>
+    {% endif %}
+
+    <time class="article-prev__pub-date">{{ date }}</time>
+  </aside>
 </section>
