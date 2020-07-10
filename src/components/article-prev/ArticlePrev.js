@@ -12,8 +12,8 @@ export default class ArticlePrev {
     this._newUrl = ''
     this._newRootHTML = ''
 
-    this._cacheElements()
-    this._setListeners()
+    // this._cacheElements()
+    // this._setListeners()
   }
 
   _cacheElements() {
