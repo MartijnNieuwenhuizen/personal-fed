@@ -1,4 +1,4 @@
-import getPageHTML from '../../static/js/utils/getPageHTML'
+import { navigateToNextPage } from '../../static/js/utils/pageNavigation'
 
 export default class ArticlePrev {
   constructor(element, options) {
@@ -50,26 +50,17 @@ export default class ArticlePrev {
   }
 
   _handleTransitionEnd() {
-    this._fetchHTMLOfNextPage()
-  }
-
-  _handleAnimationEnd() {
-    this._setNewHTMLToRootElement()
-    this._removeAnimationEndListener()
-    ArticlePrev._updateHistory(this._newUrl)
-  }
-
-  async _fetchHTMLOfNextPage() {
-    const nextPageHTML = await getPageHTML(this._newUrl)
-
-    if (!nextPageHTML) {
-      return
-    }
-
-    this._newRootHTML = nextPageHTML.querySelector('main').innerHTML
+    navigateToNextPage(this._rootElement)(this._newUrl)
 
     this._removeTransitionEndListener()
     this._setTransitionHTML()
+  }
+
+  _handleAnimationEnd() {
+    this._rootElement.removeEventListener(
+      'animationend',
+      this._handleAnimationEnd
+    )
   }
 
   // Set custom HTML to innerHTML as animate out animation
@@ -81,21 +72,5 @@ export default class ArticlePrev {
 `
 
     this._rootElement.addEventListener('animationend', this._handleAnimationEnd)
-  }
-
-  _removeAnimationEndListener() {
-    this._rootElement.removeEventListener(
-      'animationend',
-      this._handleAnimationEnd
-    )
-  }
-
-  _setNewHTMLToRootElement() {
-    this._rootElement.innerHTML = this._newRootHTML
-  }
-
-  static _updateHistory(url) {
-    // history.pushState(null, '', href)
-    window.location = url
   }
 }
