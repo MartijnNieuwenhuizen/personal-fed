@@ -21,6 +21,7 @@
 
     font-size: var(--heading-3);
     letter-spacing: var(--letter-spacing-m);
+    cursor: pointer;
 
     &:before {
       @include colored-square {
@@ -49,12 +50,8 @@
 
   &:hover,
   &:focus {
-    .article-prev__title {
-      cursor: pointer;
-
-      &:before {
-        transform: translate(-0.1rem, -0.3rem) scale(1.05) rotate(-2deg);
-      }
+    .article-prev__title:before {
+      transform: translate(-0.1rem, -0.3rem) scale(1.05) rotate(-2deg);
     }
   }
 
@@ -71,4 +68,44 @@
       align-self: end;
     }
   }
+
+  &[data-animate] .article-prev__title:before {
+    // Set highest z-index to just show a colored square on the window
+    z-index: 999;
+
+    // Scale absurd amounts and translate to the whole width and hight of the page to cover all without using position absolute
+    transform: translate(-100vw, -100vh) scale(30) rotate(-2deg) !important;
+    background-color: var(--color-primary);
+
+    transition: var(--pace-normal) var(--ease-in) transform,
+      var(--pace-normal) var(--ease-in) background-color;
+  }
+}
+
+@keyframes foo {
+  from {
+    background-color: var(--color-primary);
+  }
+  to {
+    background-color: var(--color-white);
+  }
+}
+
+.foo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-primary);
+}
+.foo-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-white);
+
+  animation: foo var(--pace-normal) var(--ease-out);
 }

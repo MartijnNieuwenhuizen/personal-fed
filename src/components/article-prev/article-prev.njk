@@ -1,7 +1,8 @@
-<section class="article-prev">
-  <a class="article-prev__link" href="{{ href }}"></a>
+<section class="article-prev" data-module="article-prev/ArticlePrev" data-root-element="main" data-trigger-element="[data-element='trigger']" data-transition-element="[data-element='transition']">
 
-  <h2 class="article-prev__title">{{ title }}</h2>
+  <a class="article-prev__link" href="{{ href }}" data-element='trigger'></a>
+
+  <h2 class="article-prev__title" data-element='transition'>{{ title }}</h2>
 
   <aside class="article-prev__meta">
     {% if readingTime %}

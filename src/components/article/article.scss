@@ -7,9 +7,9 @@
 
   &__main {
     opacity: 0;
-    animation: fade-in var(--pace-normal) var(--delay-long) var(--ease-in-out)
-        forwards,
-      move-from-below var(--pace-normal) var(--delay-long) var(--ease-in-out)
+    animation: fade-in var(--pace-normal) var(--delay-default)
+        var(--ease-in-out) forwards,
+      move-from-below var(--pace-normal) var(--delay-default) var(--ease-in-out)
         both;
 
     > h1:first-of-type {
@@ -47,10 +47,8 @@
     background-color: var(--color-primary-lighter);
 
     opacity: 0;
-    animation: fade-in var(--pace-slow) var(--delay-default) var(--ease-in-out)
-        forwards,
-      create-from-top var(--pace-slower) var(--delay-default) var(--ease-in-out)
-        forwards;
+    animation: fade-in var(--pace-slow) var(--ease-in-out) forwards,
+      create-from-top var(--pace-slower) var(--ease-in-out) forwards;
 
     @include breakpoint($breakpoint-l) {
       z-index: -1;
