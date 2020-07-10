@@ -18,7 +18,7 @@
     color: #0467b2;
   }
   &__word-3 {
-    color: #383838;
+    color: var(--color-black);
   }
 
   .art-direction-layout-1__word--with-mask {
@@ -31,7 +31,7 @@
       left: 0vmin;
       right: -10vmin;
       height: 21vmin;
-      background-color: white;
+      background-color: var(--color-white);
     }
   }
 }
@@ -96,7 +96,7 @@
   margin: 10vh 0 0;
 
   .art-direction-layout-1__word {
-    color: #383838;
+    color: var(--color-black);
 
     text-shadow: 0 -12vmin #0467b2, 0 -24vmin #e82643;
   }

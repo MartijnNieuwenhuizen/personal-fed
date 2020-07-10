@@ -69,6 +69,10 @@
     }
   }
 
+  &__pub-date {
+    white-space: nowrap;
+  }
+
   &[data-animate] .article-prev__title:before {
     // Set highest z-index to just show a colored square on the window
     z-index: 999;

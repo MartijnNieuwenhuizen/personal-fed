@@ -19,6 +19,9 @@ body {
   overflow-x: hidden;
   font-family: var(--font-family-sans-serif);
   font-weight: var(--font-weight-normal);
+
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 pre code {
