@@ -3,7 +3,7 @@
   src: url('../fonts/crimsontext-bolditalic-webfont.woff2') format('woff2'),
     url('../fonts/crimsontext-bolditalic-webfont.woff') format('woff'),
     url('../fonts/crimsontext-bolditalic-webfont.ttf') format('truetype');
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -12,7 +12,7 @@
   src: url('../fonts/crimsontext-regularitalic-webfont.woff2') format('woff2'),
     url('../fonts/crimsontext-regularitalic-webfont.woff') format('woff'),
     url('../fonts/crimsontext-regularitalic-webfont.ttf') format('truetype');
-  font-weight: var(--font-weight-normal);
+  font-weight: normal;
   font-style: italic;
 }
 
@@ -21,7 +21,7 @@
   src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
     url('../fonts/lato-bold-webfont.woff') format('woff'),
     url('../fonts/lato-bold-webfont.ttf') format('truetype');
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -30,13 +30,16 @@
   src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
     url('../fonts/lato-regular-webfont.woff') format('woff'),
     url('../fonts/lato-regular-webfont.ttf') format('truetype');
-  font-weight: var(--font-weight-normal);
+  font-weight: normal;
   font-style: normal;
 }
 
 :root {
   --font-family-serif: 'Crimson-Text', serif;
   --font-family-sans-serif: 'Lato', 'Helvetica', 'Arial', sans-serif;
+
+  --font-weight-bold: bold;
+  --font-weight-normal: normal;
 
   --font-size-base: 18px;
   --vw-min: 320;
@@ -74,6 +77,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-serif);
+  font-style: italic;
 }
 
 h1 {
