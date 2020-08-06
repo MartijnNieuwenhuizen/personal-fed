@@ -6,6 +6,7 @@ export default class Push {
 
     ;(window.pushalertbyiw || []).push(['disableAutoInit', true])
     ;(window.pushalertbyiw || []).push(['onReady', this.onPAReady])
+    console.log('window.pushalertbyiw: ', window.pushalertbyiw)
   }
 
   onPAReady() {
