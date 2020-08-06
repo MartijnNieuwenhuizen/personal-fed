@@ -13,9 +13,6 @@ export default class Push {
   }
 
   static _handleClick() {
-    window.PushAlertCo.init()
-    PushAlertCo.init()
-    window.PushAlertCo.triggerMe(true)
-    PushAlertCo.triggerMe(true)
+    PushAlertCo.forceSubscribe()
   }
 }
