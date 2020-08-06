@@ -16,6 +16,5 @@ export default class Push {
 
   static _handleClick() {
     window.PushAlertCo.forceSubscribe()
-    PushAlertCo.forceSubscribe()
   }
 }
