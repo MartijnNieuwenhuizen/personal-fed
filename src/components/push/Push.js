@@ -4,6 +4,7 @@ export default class Push {
 
     this.onPAReady = this.onPAReady.bind(this)
 
+    ;(window.pushalertbyiw || []).push(['disableAutoInit', true])
     ;(window.pushalertbyiw || []).push(['onReady', this.onPAReady])
   }
 
