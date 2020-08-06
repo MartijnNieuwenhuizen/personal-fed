@@ -85,6 +85,15 @@ module.exports = {
     }
   },
 
+  move: {
+    src: {
+      move: `./*.{js,json}`
+    },
+    dist: {
+      move: `${base.dist}`
+    }
+  },
+
   githooks: {
     src: {
       all: './tasks/githooks/*'

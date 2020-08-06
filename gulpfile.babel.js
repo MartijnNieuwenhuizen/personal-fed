@@ -17,12 +17,13 @@ import { githooks } from './tasks/githooks'
 import { zip } from './tasks/zip'
 import { renderArticles } from './tasks/renderArticles'
 import { renderBlogs } from './tasks/renderBlogs'
+import { move, moveWatch } from './tasks/move'
 
 function dev(cb) {
   return series(
     clean,
     parallel(renderArticles, renderBlogs),
-    parallel(docs, html, img, css, fonts),
+    parallel(docs, html, img, css, fonts, move),
     parallel(
       js,
       browserSync,
@@ -30,7 +31,8 @@ function dev(cb) {
       htmlWatch,
       imgWatch,
       cssWatch,
-      fontsWatch
+      fontsWatch,
+      moveWatch
     )
   )(cb)
 }
@@ -43,7 +45,7 @@ function dist(cb) {
   return series(
     clean,
     parallel(renderArticles, renderBlogs),
-    parallel(docs, html, img, css, fonts, js),
+    parallel(docs, html, img, css, fonts, move, js),
     zip
   )(cb)
 }
