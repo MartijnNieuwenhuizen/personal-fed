@@ -62,7 +62,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^5.0.0",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.1.2",
     "ignore": "^5.1.4",
     "js-beautify": "^1.10.2",
     "js-yaml": "^3.13.1",
